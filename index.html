@@ -153,15 +153,39 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-006">RECORD 006 — 広くしただけでは、探索にはならなかった。</h2>
-<p>Stage 1が「最低限遊べるもの」として完成し、次に取りかかったのは地下都市の居住区だった。最初は単純に、Stage 1より少し広くし、敵と経験値を増やせば次のStageらしくなると思っていた。</p>
-<p>ところがGrayboxを実際に歩いてみると、Mapは広いのに先へ進む必要がなかった。敵が同じ場所へ供給され続けるので、入口付近で戦い続けても攻略できてしまう。住居や広場、設備を作っても、プレイヤーから見れば背景でしかない。</p>
-<p>そこでStage 2だけ、敵の出現を有限のZone Encounterへ変更した。新しい区画へ進むと敵が現れ、倒し切るとその場所は静かになる。戦闘が終わったら周囲を見る。枝道へ入り、壊れたInfrastructureを探す。そして先へ進む。</p>
-<p>Gimmickにも問題があった。電源復旧やShelterという設定自体は気に入っていたが、初見では何をすればよいのか分かりにくい。そこで非常放送を使った。「電源が落ちている」「保守電源盤で復旧してほしい」。場所そのものは言わず、赤い非常灯、床を流れる光、標識を手掛かりにする。</p>
-<p>再び遊ぶと、今度はMapの広さに意味が生まれた。その場で敵を狩り続けるのではなく、「次の区画を見に行こう」と思えるようになった。</p>
-<p>ただ、別の問題も見えた。Gimmickを見つけるまでは面白い。でも見つけた後は、数秒その場に立つだけ。探索はゲームになったが、復旧作業はまだ「作業」だった。</p>
+<p class="lead-note">Stage 2の居住区を作り始めた。広くしただけでは探索にならなかったので、敵の出方を区画ごとの有限の戦闘に変え、非常放送で「何をすればいいか」を伝えた。探索はゲームになったが、復旧はまだ「作業」だった。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、Stage 1が「最低限遊べるもの」として完成した。次は地下都市の居住区だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Stage 2だね。最初はどう作るつもりだった？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">単純に考えてたよ。Stage 1より少し広くして、敵と経験値を増やせば、次のStageらしくなるって。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それで、Grayboxを実際に歩いてみてどうだった？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Mapは広いのに、先へ進む必要がなかったんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それは事件だね。手がかりを順番に見ていこう。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG 1 — 広いのに、先へ進む理由がない</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">1つ目の手がかり。敵が同じ場所へ供給され続けている。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ってことは、入口のあたりで戦い続けても……。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">攻略できてしまう。2つ目の手がかり。住居も広場も設備も作ったのに、プレイヤーから見れば背景でしかない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">RPGで言うと、町の入口で敵を狩り続けるだけでクリアできちゃう感じか。せっかくの街並みが、ただの壁紙だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">広いMapを作ることと、探索する価値を作ることは、別だったんだね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そこでStage 2だけ、敵の出方を有限のZone Encounterに変えた。新しい区画へ進むと敵が現れて、倒し切るとその場所は静かになる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">静かになったら、周りを見る。枝道へ入って、壊れた設備（Infrastructure）を探す。そして先へ進む。</div></div>
+</div>
+<div class="anomaly"><h3>ANOMALY LOG 2 — 何をすればいいのか分からない</h3>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">もうひとつ、Gimmickにも問題があった。電源の復旧やShelterって設定自体は気に入ってるんだけど。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">初見では、何をすればいいのか分かりにくいんだよね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そこで非常放送を使った。「電源が落ちている」「保守電源盤で復旧してほしい」。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、場所は言わないんだよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">うん。場所そのものは言わない。赤い非常灯、床を流れる光、標識。それを手がかりにしてもらう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それでもう一度遊んだら、今度はMapの広さに意味が生まれた。その場で敵を狩り続けるんじゃなくて、「次の区画を見に行こう」って思えたんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、別の問題も見えたね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Gimmickを見つけるまでは面白い。でも見つけたあとは、数秒その場に立つだけなんだよ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">探索はゲームになった。でも復旧作業は、まだ「作業」のままだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">探索がゲームになったなら、次は復旧の番だな。</div></div>
+</div>
 <div class="box"><b>ANOMALY LOG</b><span>広いMapを作ることと、探索する価値を作ることは別だった。</span></div>
 <div class="box"><b>AI CREW</b><span>Human — Playtest / Gameplay judgment</span><span>Opus 5.5 — Foundation / Graybox / automated QA</span><span>GPT-6 Sol — Direction / integration planning</span></div>
 <div class="box"><b>DEVELOPMENT STACK</b><span>Unity 6 / C# / Zone Encounter / Telemetry / Project Memory</span></div>
+<p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 <h2 id="record-007">RECORD 007 — 敵に囲まれたまま、電源を入れる。</h2>
 <p>「復旧が作業になっている」という問題に対して、次に試したのは単純だった。敵を全部倒さなくても、電源を復旧できるようにする。</p>
