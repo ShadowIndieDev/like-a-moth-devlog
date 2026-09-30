@@ -15,45 +15,142 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <nav><div class="wrap"><div class="brand">LIKE A MOTH</div><div><a href="#records">RECORDS</a><a href="#record-013">LATEST</a></div></div></nav>
 <header class="wrap"><div class="ey">DEVELOPMENT ARCHIVE / INTEGRATED EDITION</div><h1>LIKE A<br>MOTH</h1><p class="lead">ゲーム制作に一度挫折した個人開発者が、AIを開発チームとして使いながら、ローポリ・ダークファンタジーRPGを形にしていく記録。</p><div class="depth">CURRENT DEPTH — STAGE 2 / THE UNLIT DISTRICT</div></header>
 <main class="wrap" id="records"><div class="index"><a href="#record-001"><b>RECORD 001</b>ゲームを作りたかった。でも、作れなかった。</a><a href="#record-002"><b>RECORD 002</b>LIKE A MOTHというゲームを考える</a><a href="#record-003"><b>RECORD 003</b>AIと最初の戦闘を作る</a><a href="#record-004"><b>RECORD 004</b>Cubeの世界から「封印された遺跡」へ</a><a href="#record-005"><b>RECORD 005</b>敵がいない。測ってみたら理由が違った</a><a href="#record-006"><b>RECORD 006 / NEW</b>広くしただけでは、探索にはならなかった。</a><a href="#record-007"><b>RECORD 007</b>敵に囲まれたまま、電源を入れる。</a><a href="#record-008"><b>RECORD 008 / NEW</b>拾ったGは、まだ自分のものではない。</a><a href="#record-009"><b>RECORD 009 / NEW</b>遺跡の外にも、ゲームを作る。</a><a href="#record-010"><b>RECORD 010 / NEW</b>仲間が増えると、探索の仕方まで変わる。</a><a href="#record-011"><b>RECORD 011 / NEW</b>誰を連れていくか。何を持っていくか。</a><a href="#record-012"><b>RECORD 012 / NEW</b>見抜いて、一閃。</a><a href="#record-013"><b>RECORD 013 / NEW</b>灯の消えた街</a></div><section class="record-block"><h2 id="record-001">RECORD 001 — ゲームを作りたかった。でも、作れなかった。</h2>
-<p>ゲームは昔から好きだった。ドラゴンクエストで新しい町に着けば、まず町の人全員に話しかける。ファイナルファンタジーでは新しい装備を見るだけでも楽しい。ゼルダでは目的地とは反対方向に怪しい道があれば、つい寄り道する。そしてフロム・ソフトウェア作品のダークファンタジーに触れてからは、「説明されていないことを想像する楽しさ」にも惹かれるようになった。</p>
-<p>振り返ると、自分がゲームで一番好きなのは、知らない世界へ入っていく感覚なのだと思う。次の町、次のダンジョン、次の階層。その先に何があるのか分からない状態で一歩進むこと自体が好きだった。</p>
-<p>当然、自分でもゲームを作ってみたいと思ったことはある。一度Unityをインストールして、チュートリアルを見ながらCubeを置いた。床を作り、短いコードをコピーして、キーを押すとCubeが動いた。それだけなのにかなり感動した。「これを続ければ、自分のRPGも作れるのでは？」と思った。</p>
-<p>しかし、その次から急に難しくなった。敵を作りたい。C#。HPを作りたい。またC#。攻撃判定を作りたい。Collider、Rigidbody、Prefab、Component……。知らない言葉を一つ調べると、その説明の中にさらに知らない言葉が出てくる。ゲームのことを考えている時間より、検索している時間の方が長くなり、やがてUnityを起動しなくなった。</p>
-<p>考えが変わったのは生成AIに触れるようになってからだ。コードを頼む。Unityへ入れる。エラーが出る。エラーをAIへ渡す。原因を説明し、修正版を返してくる。もう一度試す。動いた。昔、自分が止まった場所を少しだけ越えた。</p>
-<p>もちろん、AIに「面白いゲームを作って」と言えば自分が遊びたいゲームが完成するわけではない。敵は何体なら楽しいのか。回復役が倒れたらどうするのか。このキャラクターは何者なのか。この音は気持ちいいのか。そういう問いには自分で答えなければならない。</p>
-<p>でも、それなら考えられる。自分が考える。AIが形にする。実際に遊ぶ。違えば直す。そうして始めたのが『LIKE A MOTH』です。最初の目標は「最低限、最初から最後まで遊べるもの」。このブログには成功だけでなく、失敗や作り直しも残していく。ゲームを作れなかった人間が、AIと一緒ならどこまで作れるのか。その記録です。</p>
-<div class="box"><b>AI CREW</b><span>Human — Creative Direction / Playtest</span><span>ChatGPT — Planning / Design</span></div><div class="box"><b>DEVELOPMENT STACK</b><span>Unity / C# / ChatGPT</span></div>
+<p class="lead-note">ゲームを作りたかったのに、一度はあきらめた。生成AIに触れて、作り方が変わった。そうして始めたのが『LIKE A MOTH』と、この開発記録だ。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">オーパス君、最初の記事だから、俺がどうしてゲームを作り始めたのかを話しておきたい。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">いいね。まずは、Shadowくんがどんな遊び方をしてきたのか聞かせて。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ゲームは昔から好きなんだ。ドラクエだと、新しい町に着いたらまず町の人全員に話しかける。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">FFは新しい装備を見てるだけで楽しいし、ゼルダだと目的地と反対方向に怪しい道があると、つい寄り道する。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">寄り道のプロだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、フロム・ソフトウェアのダークファンタジーに触れてからは、「説明されていないことを想像する楽しさ」にも惹かれるようになった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">手がかりは4つそろったね。町の人、装備、寄り道、説明のない世界。共通しているものは何だと思う？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">……知らない世界へ入っていく感覚、かな。次の町、次のダンジョン、次の階層。先に何があるか分からないまま一歩進むこと自体が好きなんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">それがShadowくんの「好き」の正体だね。自分で作ろうと思ったことは？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ある。一度Unityを入れて、チュートリアルを見ながらCubeを置いたんだ。床を作って、短いコードをコピーして、キーを押したらCubeが動いた。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それだけなのに、かなり感動した。「これを続ければ、自分のRPGも作れるのでは？」って。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">でも、そこで一度止まったんだよね。その話は、あとで事件ファイルとして順番に見よう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">うん。考えが変わったのは、生成AIに触れるようになってからだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">コードを頼む。Unityへ入れる。エラーが出る。エラーをAIへ渡すと、原因の説明と修正版が返ってくる。もう一度試す。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そして、動いた。昔、自分が止まった場所を少しだけ越えられたんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">ただ、ひとつ大事な点がある。AIに「面白いゲームを作って」と言っても、Shadowくんが遊びたいゲームが完成するわけじゃない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">敵は何体なら楽しいのか。回復役が倒れたらどうするのか。このキャラクターは何者なのか。この音は気持ちいいのか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">そう。その問いには、Shadowくんが自分で答えないといけない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それなら考えられる。俺が考える。AIが形にする。実際に遊ぶ。違えば直す。そうして始めたのが『LIKE A MOTH』だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">最初の目標は？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「最低限、最初から最後まで遊べるもの」。このブログには、成功だけじゃなく失敗や作り直しも残していく。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — Unityを起動しなくなった</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">では事件ファイルを開こう。Cubeが動いた、その次に何が起きたのか。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">急に難しくなった。敵を作りたい、C#。HPを作りたい、またC#。攻撃判定を作りたい、Collider、Rigidbody、Prefab、Component……。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">手がかりは、知らない言葉を一つ調べると、その説明の中にさらに知らない言葉が出てくること。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そう。ゲームのことを考えている時間より、検索している時間の方が長くなって、やがてUnityを起動しなくなった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">止まった原因は、ゲームの考えが足りなかったからじゃない。言葉の壁の方だったんだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だから今度は、AIと一緒にその壁を越えていく。ゲームを作れなかった人間が、AIと一緒ならどこまで作れるのか。この記録で確かめるよ。</div></div>
+</div>
+<div class="box"><b>AI CREW</b><span>Human — Creative Direction / Playtest</span><span>ChatGPT — Planning / Design</span></div>
+<div class="box"><b>DEVELOPMENT STACK</b><span>Unity / C# / ChatGPT</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-002">RECORD 002 — LIKE A MOTHというゲームを考える</h2>
-<p>好きなゲームの要素を全部入れれば面白くなるわけではない。そこで、自分はゲームの何が好きなのかを考え直した。一つは、成長が目に見えること。もう一つは、役割の違う仲間がいること。</p>
-<p>LIKE A MOTHは4人パーティーにした。Alex、Judge、Eclair、Lumiera。プレイヤーは一人を操作し、残り三人はAIが動く。ただ4人が同時に攻撃するだけにはしたくなかった。Judgeが敵を凍らせ、Alexが砕く。Freeze → Shatter。EclairがBleedを蓄積し、Ruptureへつなぐ。Lumieraはパーティーを立て直す。</p>
-<p>世界は地上から地下へ進む。遺跡入口、地下都市・居住区、研究区画、封印区画、最深部。最初は古い遺跡にしか見えないが、深く進むと人が暮らした痕跡、研究施設、封印のために行われた行為が見えてくる。深く潜るほど文明の印象そのものが変わる構造にしたい。</p>
-<p>見た目はリアル3DではなくLow-poly。昔の3D RPGが好きだからという理由もあるが、単に古く見せたいわけではない。少ないポリゴンだからこそ形を強くする。環境もStone、Grey、Blue-grey、Dark Blueを基本に、Cyanの魔力、Goldの装置、Orange / Redの危険というルールを持たせた。</p>
-<p>古典RPGの成長感、4人の役割がつながる戦闘、Low-polyで想像の余地を残す世界、深く潜るほど過去の見え方が変わる遺跡。この4つがLIKE A MOTHの土台になった。</p>
+<p class="lead-note">好きな要素を全部入れても、面白くなるとは限らない。自分がゲームの何を好きなのかを考え直して、LIKE A MOTHの土台を4つに絞った。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">オーパス君、LIKE A MOTHがどんなゲームなのか、形にしていこう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">仲間から決めようか。LIKE A MOTHは4人パーティーだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Alex、Judge、Eclair、Lumiera。プレイヤーは一人を操作して、残り三人はAIが動く。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ただ、4人が同時に攻撃するだけにはしたくないんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">役割がつながる形にしよう。Judgeが敵を凍らせて、Alexが砕く。Freeze → Shatterだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">EclairはBleedを溜めて、Ruptureへつなぐ。Lumieraはパーティーを立て直す。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">次は世界だ。地上から地下へ進む。遺跡入口、地下都市・居住区、研究区画、封印区画、最深部。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">最初は古い遺跡にしか見えないけど、深く進むと人が暮らした痕跡や研究施設、封印のために行われた行為が見えてくる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">深く潜るほど、文明の印象そのものが変わる構造だね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そう、それがやりたい。RPGで言うと、ダンジョンの奥ほど世界の見え方が変わる感じ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">見た目はどうする？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">リアル3DじゃなくてLow-poly。昔の3D RPGが好きなのもあるけど、ただ古く見せたいわけじゃない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">少ないポリゴンだからこそ、形を強くする。色にもルールを持たせよう。Stone、Grey、Blue-grey、Dark Blueを基本に、Cyanは魔力、Goldは装置、Orange / Redは危険。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">古典RPGの成長感、4人の役割がつながる戦闘、Low-polyで想像の余地を残す世界、深く潜るほど過去の見え方が変わる遺跡。この4つをLIKE A MOTHの土台にする。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 全部入れたら面白くなる？</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">この土台を決める前に、ひとつ問いがあったね。好きなゲームの要素を全部入れたら、面白くなるのか。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ならない、と思った。だから、自分がゲームの何を好きなのかを考え直したんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">答えは2つだったね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">成長が目に見えること。役割の違う仲間がいること。そこから4つの土台ができた。これでいこう。</div></div>
+</div>
 <div class="box"><b>TECH NOTE</b><span>4人Party / Freeze→Shatter / Bleed→Rupture / Five Depths / Modern Low-Poly</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-003">RECORD 003 — AIと最初の戦闘を作る</h2>
-<p>最初に形にしたかったのは、4人が一緒に戦っている状態だった。Alexは前線、JudgeはFreeze、EclairはBleed、LumieraはHeal。Judgeが敵を凍らせ、Alexの攻撃で砕け、Shatterが出る。自分で考えたルールが画面の中で起きた瞬間は、完成したゲームを遊ぶのとは違う嬉しさがあった。</p>
-<p>Bleedも最初から今の仕様ではない。初期はRuptureを起こすための印に近く、継続ダメージすらなかった。後で遊び「Freezeとの差が弱い」と感じ、DoTを追加した。作る、遊ぶ、違和感を見つける、変える。その繰り返しだった。</p>
-<p>AIの使い方も変わった。「コードを書いて」だけではなく、変更前を保存し、触ってはいけない部分を指定し、実装後にテストする。Checkpointと回帰確認を使い、AIに開発工程の一部を任せる形になっていった。</p>
-<p>同時にBlenderでLow-polyキャラクター制作も進めた。ゲーム中の距離からでも髪色、武器、衣装、シルエットで誰なのか分かることを優先した。UIも背景も音もまだ仮だったが、4人がいて、敵がいて、仲間が動き、連携が起きる。LIKE A MOTHが初めて「動くゲーム」になった。</p>
-<div class="box"><b>AI CREW</b><span>GPT系 — C# / Runtime / QA</span><span>3D Production Support — Blender workflow</span><span>Human — Playtest / Direction</span></div><div class="box"><b>DEVELOPMENT STACK</b><span>Unity 6 / URP / C# / Blender / ChatGPT</span></div>
+<p class="lead-note">最初の戦闘を作った。4人が一緒に戦い、Freeze → Shatterが画面の中で起きた。LIKE A MOTHが初めて「動くゲーム」になった。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">オーパス君、最初に形にしたいのは、4人が一緒に戦っている状態なんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">役割はこうだったね。Alexは前線、JudgeはFreeze、EclairはBleed、LumieraはHeal。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、Judgeが敵を凍らせて、Alexの攻撃で砕けて、Shatterが出る。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">出たね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">自分で考えたルールが画面の中で起きた。完成したゲームを遊ぶのとは、違う嬉しさがあるな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">この頃から、AIへの頼み方も変わったね。「コードを書いて」だけじゃなく、変更前を保存して、触ってはいけない部分を指定して、実装したあとにテストする。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Checkpointと回帰確認だよね。AIに開発の工程の一部を任せられるようになった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">同時に、BlenderでLow-polyのキャラクターも作り始めた。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ゲーム中の距離からでも、髪色、武器、衣装、シルエットで誰なのか分かるのを優先した。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">UIも背景も音も、まだ仮のままだけどね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それでも、4人がいて、敵がいて、仲間が動いて、連携が起きる。LIKE A MOTHが初めて「動くゲーム」になった。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — Bleedの差が弱い</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">この頃の事件をひとつ開こう。Bleedは、最初から今の仕様じゃなかった。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">最初はRuptureを起こすための印に近くて、継続ダメージすらなかったんだよね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">そう。それで遊んでみたら？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「Freezeとの差が弱い」って感じた。だからDoTを追加した。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">作る、遊ぶ、違和感を見つける、変える。その繰り返しだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">遊んで違和感があったら変える。これからもこのやり方でいこう。</div></div>
+</div>
+<div class="box"><b>AI CREW</b><span>GPT系 — C# / Runtime / QA</span><span>3D Production Support — Blender workflow</span><span>Human — Playtest / Direction</span></div>
+<div class="box"><b>DEVELOPMENT STACK</b><span>Unity 6 / URP / C# / Blender / ChatGPT</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-004">RECORD 004 — Cubeの世界から「封印された遺跡」へ</h2>
-<p>戦闘が動き始めると、次に気になったのは背景だった。そこでStage 1のEnvironment制作に入った。テーマは「封印された聖域」。冷たい石、Grey、Blue-grey、Dark Blue。そこへCyanとGoldの魔力。Orange / Redは危険表示に残す。</p>
-<p>StageはStart Area、Combat Zone、Central Ruins、Seal Area、Boss Gate、Boss Arenaへ進む。入口から奥へ行くほど柱が崩れ、像が壊れ、やがて封印装置が現れる。短いStageでも歩くだけで小さな物語が感じられるようにした。</p>
-<p>EnvironmentはGameplay Areaを完全3D、中遠景を軽量Low-poly architectureで補うHybrid 2.5D。敵もBasic、Heavy、Ranged、Chargerの4種類へ。最終的なtriangle数は480、518、410、494。細部より0.5秒で役割が分かるシルエットを優先した。</p>
-<p>この頃から「見た目を良くするためにゲームを壊してはいけない」と強く意識するようになった。変更前にCheckpointを作り、Scene hashを記録し、変更後にGameplayが変わっていないか確認する。Cubeと仮モデルだった画面が「自分のゲーム」に見え始めた時期だった。</p>
+<p class="lead-note">戦闘が動いたので、次は背景。Stage 1を「封印された聖域」に作り、敵も4種類にした。見た目を良くしても、ゲームは壊さない。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">戦闘が動くようになったら、今度は背景が気になってきた。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">Stage 1のEnvironmentに入ろう。テーマは「封印された聖域」だね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">冷たい石、Grey、Blue-grey、Dark Blue。そこにCyanとGoldの魔力。Orange / Redは危険の表示に残しておく。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">道のりは、Start Area、Combat Zone、Central Ruins、Seal Area、Boss Gate、Boss Arena。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">入口から奥へ行くほど柱が崩れて、像が壊れて、やがて封印装置が現れる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">短いStageでも、歩くだけで小さな物語が感じられるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">作り方は？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">Hybrid 2.5Dだよ。遊ぶ場所（Gameplay Area）は完全な3Dで、中景と遠景は軽いLow-polyの建物で補う。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">敵も4種類になったよね。Basic、Heavy、Ranged、Charger。細かさより、0.5秒で役割が分かるシルエットを優先したい。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">うん、形を強くしてある。最終的なtriangle数は、下の「数字で見る」にまとめておくね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Cubeと仮モデルだった画面が、やっと「自分のゲーム」に見えてきた。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 見た目がゲームを壊さないように</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">この頃から、ひとつ強く気にしていたことがあるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「見た目を良くするために、ゲームを壊してはいけない」。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">だから手順を決めた。変更の前にCheckpointを作る。Scene hashを記録する。変更の後に、Gameplayが変わっていないか確認する。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">見た目を良くしても、遊びは変えない。この順番は守っていこう。</div></div>
+</div>
 <div class="box"><b>TECH NOTE</b><span>Gameplay Area = 3D / Mid-Far Background = Lightweight Low-Poly</span></div>
+<div class="box"><b>数字で見る</b><span>敵4種のtriangle数：Basic 480・Heavy 518・Ranged 410・Charger 494。</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-005">RECORD 005 — 敵がいない。測ってみたら理由が違った</h2>
-<p>Stage 1を遊んでいると、途中から敵が少なくなり、何もいない時間が目立った。最初に疑ったのは、封印されたエリアの向こう側に敵がSpawnしていること。実際、そのバグは存在した。</p>
-<p>しかし計測すると主原因は別だった。開始時には6体いる。それを倒した後の補充は3秒に1体。一方、4人パーティーはそれ以上の速度で敵を倒していた。Spawnerが止まっていたのではなく、供給より撃破が速かった。</p>
-<p>そこで生存数、Spawn attempt、撃破を記録し、Target 3、4、5を比較した。数字だけなら4でも成立しそうだったが、実際に必殺技を使いながら遊ぶと5の方が戦場が途切れず気持ちよかった。最終的にTarget 5を採用した。</p>
-<p>この一件で開発方法が明確になった。違和感がある。もっともらしい原因を想像する。そこで直さない。まず測る。原因を分ける。候補を作る。そして最後は人間が遊んで決める。AIは大量のログと反復試験を担当し、「どちらが楽しいか」はHuman Gateで決める。</p>
-<p>この考え方は、その後のVoice、BGM、SE、Balanceでも繰り返すことになる。Stage 1はBoss、UI、Voice、BGM、SEまで揃い、「最低限遊べるもの」という最初の目標へ近づいていった。</p>
+<p class="lead-note">Stage 1で、途中から敵がいなくなった。原因はSpawnのバグだと思ったら、測ってみると別の理由だった。最後は遊んで、敵の数を決めた。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">オーパス君、Stage 1を遊んでると、途中から敵が少なくなるんだよ。何もいない時間が目立つ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">それは事件だね。順番に見ていこう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">絶対、封印されたエリアの向こう側に敵が湧いてるんだって。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">実際、そのバグはあったよ。でも、直す前にまず測ってみよう。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 敵がいない</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">測った結果、主な原因は別だった。開始のときには6体いる。それを倒したあとの補充は、3秒に1体。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それって、つまり……。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">4人パーティーは、それより速く敵を倒していたんだ。Spawnerが止まっていたんじゃない。供給より撃破が速かった。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">俺たちが強すぎたのかよ！</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">そういうことになるね。そこで生存数、Spawnの試み、撃破を記録して、敵の数の目標（Target）を3、4、5で比べた。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">数字だけなら、4でも成り立ちそうだった。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、必殺技を使いながら実際に遊ぶと、5の方が戦場が途切れなくて気持ちいい。Target 5でいこう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">これで開発のやり方がはっきりしたね。違和感がある。もっともらしい原因を想像する。でも、そこで直さない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">まず測る。原因を分ける。候補を作る。そして最後は人間が遊んで決める。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ログと繰り返しの試験はAIが担当して、「どっちが楽しいか」はHuman Gateで俺が決める、ってことだね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">この考え方は、このあとのVoice、BGM、SE、Balanceでも繰り返すことになる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Stage 1にはBoss、UI、Voice、BGM、SEまで揃った。「最低限遊べるもの」まで、あと少しだ。</div></div>
+</div>
 <div class="box"><b>ANOMALY LOG</b><span>SYMPTOM: 敵が少ない</span><span>FIRST HYPOTHESIS: 封印区画へのSpawn</span><span>ROOT CAUSE: Kill pace &gt; Spawn supply</span><span>HUMAN DECISION: Target 5</span></div>
 <div class="box"><b>DEVELOPMENT STACK</b><span>Unity / C# / Telemetry / Automated Play QA / Human Gate</span></div>
+<div class="box"><b>数字で見る</b><span>開始時の敵 6体、倒した後の補充 3秒に1体。比べた目標（Target）3・4・5 → 採用は5。</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-006">RECORD 006 — 広くしただけでは、探索にはならなかった。</h2>
 <p>Stage 1が「最低限遊べるもの」として完成し、次に取りかかったのは地下都市の居住区だった。最初は単純に、Stage 1より少し広くし、敵と経験値を増やせば次のStageらしくなると思っていた。</p>
