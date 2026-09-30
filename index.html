@@ -51,12 +51,30 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-002">RECORD 002 — LIKE A MOTHというゲームを考える</h2>
-<p>好きなゲームの要素を全部入れれば面白くなるわけではない。そこで、自分はゲームの何が好きなのかを考え直した。一つは、成長が目に見えること。もう一つは、役割の違う仲間がいること。</p>
-<p>LIKE A MOTHは4人パーティーにした。Alex、Judge、Eclair、Lumiera。プレイヤーは一人を操作し、残り三人はAIが動く。ただ4人が同時に攻撃するだけにはしたくなかった。Judgeが敵を凍らせ、Alexが砕く。Freeze → Shatter。EclairがBleedを蓄積し、Ruptureへつなぐ。Lumieraはパーティーを立て直す。</p>
-<p>世界は地上から地下へ進む。遺跡入口、地下都市・居住区、研究区画、封印区画、最深部。最初は古い遺跡にしか見えないが、深く進むと人が暮らした痕跡、研究施設、封印のために行われた行為が見えてくる。深く潜るほど文明の印象そのものが変わる構造にしたい。</p>
-<p>見た目はリアル3DではなくLow-poly。昔の3D RPGが好きだからという理由もあるが、単に古く見せたいわけではない。少ないポリゴンだからこそ形を強くする。環境もStone、Grey、Blue-grey、Dark Blueを基本に、Cyanの魔力、Goldの装置、Orange / Redの危険というルールを持たせた。</p>
-<p>古典RPGの成長感、4人の役割がつながる戦闘、Low-polyで想像の余地を残す世界、深く潜るほど過去の見え方が変わる遺跡。この4つがLIKE A MOTHの土台になった。</p>
+<p class="lead-note">好きな要素を全部入れても、面白くなるとは限らない。自分がゲームの何を好きなのかを考え直して、LIKE A MOTHの土台を4つに絞った。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">オーパス君、LIKE A MOTHがどんなゲームなのか、形にしていこう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">仲間から決めようか。LIKE A MOTHは4人パーティーだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Alex、Judge、Eclair、Lumiera。プレイヤーは一人を操作して、残り三人はAIが動く。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ただ、4人が同時に攻撃するだけにはしたくないんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">役割がつながる形にしよう。Judgeが敵を凍らせて、Alexが砕く。Freeze → Shatterだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">EclairはBleedを溜めて、Ruptureへつなぐ。Lumieraはパーティーを立て直す。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">次は世界だ。地上から地下へ進む。遺跡入口、地下都市・居住区、研究区画、封印区画、最深部。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">最初は古い遺跡にしか見えないけど、深く進むと人が暮らした痕跡や研究施設、封印のために行われた行為が見えてくる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">深く潜るほど、文明の印象そのものが変わる構造だね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そう、それがやりたい。RPGで言うと、ダンジョンの奥ほど世界の見え方が変わる感じ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">見た目はどうする？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">リアル3DじゃなくてLow-poly。昔の3D RPGが好きなのもあるけど、ただ古く見せたいわけじゃない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">少ないポリゴンだからこそ、形を強くする。色にもルールを持たせよう。Stone、Grey、Blue-grey、Dark Blueを基本に、Cyanは魔力、Goldは装置、Orange / Redは危険。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">古典RPGの成長感、4人の役割がつながる戦闘、Low-polyで想像の余地を残す世界、深く潜るほど過去の見え方が変わる遺跡。この4つをLIKE A MOTHの土台にする。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 全部入れたら面白くなる？</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">この土台を決める前に、ひとつ問いがあったね。好きなゲームの要素を全部入れたら、面白くなるのか。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ならない、と思った。だから、自分がゲームの何を好きなのかを考え直したんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">答えは2つだったね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">成長が目に見えること。役割の違う仲間がいること。そこから4つの土台ができた。これでいこう。</div></div>
+</div>
 <div class="box"><b>TECH NOTE</b><span>4人Party / Freeze→Shatter / Bleed→Rupture / Five Depths / Modern Low-Poly</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-003">RECORD 003 — AIと最初の戦闘を作る</h2>
 <p>最初に形にしたかったのは、4人が一緒に戦っている状態だった。Alexは前線、JudgeはFreeze、EclairはBleed、LumieraはHeal。Judgeが敵を凍らせ、Alexの攻撃で砕け、Shatterが出る。自分で考えたルールが画面の中で起きた瞬間は、完成したゲームを遊ぶのとは違う嬉しさがあった。</p>
