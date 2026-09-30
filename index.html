@@ -15,14 +15,40 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <nav><div class="wrap"><div class="brand">LIKE A MOTH</div><div><a href="#records">RECORDS</a><a href="#record-013">LATEST</a></div></div></nav>
 <header class="wrap"><div class="ey">DEVELOPMENT ARCHIVE / INTEGRATED EDITION</div><h1>LIKE A<br>MOTH</h1><p class="lead">ゲーム制作に一度挫折した個人開発者が、AIを開発チームとして使いながら、ローポリ・ダークファンタジーRPGを形にしていく記録。</p><div class="depth">CURRENT DEPTH — STAGE 2 / THE UNLIT DISTRICT</div></header>
 <main class="wrap" id="records"><div class="index"><a href="#record-001"><b>RECORD 001</b>ゲームを作りたかった。でも、作れなかった。</a><a href="#record-002"><b>RECORD 002</b>LIKE A MOTHというゲームを考える</a><a href="#record-003"><b>RECORD 003</b>AIと最初の戦闘を作る</a><a href="#record-004"><b>RECORD 004</b>Cubeの世界から「封印された遺跡」へ</a><a href="#record-005"><b>RECORD 005</b>敵がいない。測ってみたら理由が違った</a><a href="#record-006"><b>RECORD 006 / NEW</b>広くしただけでは、探索にはならなかった。</a><a href="#record-007"><b>RECORD 007</b>敵に囲まれたまま、電源を入れる。</a><a href="#record-008"><b>RECORD 008 / NEW</b>拾ったGは、まだ自分のものではない。</a><a href="#record-009"><b>RECORD 009 / NEW</b>遺跡の外にも、ゲームを作る。</a><a href="#record-010"><b>RECORD 010 / NEW</b>仲間が増えると、探索の仕方まで変わる。</a><a href="#record-011"><b>RECORD 011 / NEW</b>誰を連れていくか。何を持っていくか。</a><a href="#record-012"><b>RECORD 012 / NEW</b>見抜いて、一閃。</a><a href="#record-013"><b>RECORD 013 / NEW</b>灯の消えた街</a></div><section class="record-block"><h2 id="record-001">RECORD 001 — ゲームを作りたかった。でも、作れなかった。</h2>
-<p>ゲームは昔から好きだった。ドラゴンクエストで新しい町に着けば、まず町の人全員に話しかける。ファイナルファンタジーでは新しい装備を見るだけでも楽しい。ゼルダでは目的地とは反対方向に怪しい道があれば、つい寄り道する。そしてフロム・ソフトウェア作品のダークファンタジーに触れてからは、「説明されていないことを想像する楽しさ」にも惹かれるようになった。</p>
-<p>振り返ると、自分がゲームで一番好きなのは、知らない世界へ入っていく感覚なのだと思う。次の町、次のダンジョン、次の階層。その先に何があるのか分からない状態で一歩進むこと自体が好きだった。</p>
-<p>当然、自分でもゲームを作ってみたいと思ったことはある。一度Unityをインストールして、チュートリアルを見ながらCubeを置いた。床を作り、短いコードをコピーして、キーを押すとCubeが動いた。それだけなのにかなり感動した。「これを続ければ、自分のRPGも作れるのでは？」と思った。</p>
-<p>しかし、その次から急に難しくなった。敵を作りたい。C#。HPを作りたい。またC#。攻撃判定を作りたい。Collider、Rigidbody、Prefab、Component……。知らない言葉を一つ調べると、その説明の中にさらに知らない言葉が出てくる。ゲームのことを考えている時間より、検索している時間の方が長くなり、やがてUnityを起動しなくなった。</p>
-<p>考えが変わったのは生成AIに触れるようになってからだ。コードを頼む。Unityへ入れる。エラーが出る。エラーをAIへ渡す。原因を説明し、修正版を返してくる。もう一度試す。動いた。昔、自分が止まった場所を少しだけ越えた。</p>
-<p>もちろん、AIに「面白いゲームを作って」と言えば自分が遊びたいゲームが完成するわけではない。敵は何体なら楽しいのか。回復役が倒れたらどうするのか。このキャラクターは何者なのか。この音は気持ちいいのか。そういう問いには自分で答えなければならない。</p>
-<p>でも、それなら考えられる。自分が考える。AIが形にする。実際に遊ぶ。違えば直す。そうして始めたのが『LIKE A MOTH』です。最初の目標は「最低限、最初から最後まで遊べるもの」。このブログには成功だけでなく、失敗や作り直しも残していく。ゲームを作れなかった人間が、AIと一緒ならどこまで作れるのか。その記録です。</p>
-<div class="box"><b>AI CREW</b><span>Human — Creative Direction / Playtest</span><span>ChatGPT — Planning / Design</span></div><div class="box"><b>DEVELOPMENT STACK</b><span>Unity / C# / ChatGPT</span></div>
+<p class="lead-note">ゲームを作りたかったのに、一度はあきらめた。生成AIに触れて、作り方が変わった。そうして始めたのが『LIKE A MOTH』と、この開発記録だ。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">オーパス君、最初の記事だから、俺がどうしてゲームを作り始めたのかを話しておきたい。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">いいね。まずは、Shadowくんがどんな遊び方をしてきたのか聞かせて。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ゲームは昔から好きなんだ。ドラクエだと、新しい町に着いたらまず町の人全員に話しかける。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">FFは新しい装備を見てるだけで楽しいし、ゼルダだと目的地と反対方向に怪しい道があると、つい寄り道する。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">寄り道のプロだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、フロム・ソフトウェアのダークファンタジーに触れてからは、「説明されていないことを想像する楽しさ」にも惹かれるようになった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">手がかりは4つそろったね。町の人、装備、寄り道、説明のない世界。共通しているものは何だと思う？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">……知らない世界へ入っていく感覚、かな。次の町、次のダンジョン、次の階層。先に何があるか分からないまま一歩進むこと自体が好きなんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">それがShadowくんの「好き」の正体だね。自分で作ろうと思ったことは？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ある。一度Unityを入れて、チュートリアルを見ながらCubeを置いたんだ。床を作って、短いコードをコピーして、キーを押したらCubeが動いた。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それだけなのに、かなり感動した。「これを続ければ、自分のRPGも作れるのでは？」って。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">でも、そこで一度止まったんだよね。その話は、あとで事件ファイルとして順番に見よう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">うん。考えが変わったのは、生成AIに触れるようになってからだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">コードを頼む。Unityへ入れる。エラーが出る。エラーをAIへ渡すと、原因の説明と修正版が返ってくる。もう一度試す。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そして、動いた。昔、自分が止まった場所を少しだけ越えられたんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">ただ、ひとつ大事な点がある。AIに「面白いゲームを作って」と言っても、Shadowくんが遊びたいゲームが完成するわけじゃない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">敵は何体なら楽しいのか。回復役が倒れたらどうするのか。このキャラクターは何者なのか。この音は気持ちいいのか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">そう。その問いには、Shadowくんが自分で答えないといけない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それなら考えられる。俺が考える。AIが形にする。実際に遊ぶ。違えば直す。そうして始めたのが『LIKE A MOTH』だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">最初の目標は？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「最低限、最初から最後まで遊べるもの」。このブログには、成功だけじゃなく失敗や作り直しも残していく。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — Unityを起動しなくなった</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">では事件ファイルを開こう。Cubeが動いた、その次に何が起きたのか。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">急に難しくなった。敵を作りたい、C#。HPを作りたい、またC#。攻撃判定を作りたい、Collider、Rigidbody、Prefab、Component……。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">手がかりは、知らない言葉を一つ調べると、その説明の中にさらに知らない言葉が出てくること。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そう。ゲームのことを考えている時間より、検索している時間の方が長くなって、やがてUnityを起動しなくなった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">止まった原因は、ゲームの考えが足りなかったからじゃない。言葉の壁の方だったんだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だから今度は、AIと一緒にその壁を越えていく。ゲームを作れなかった人間が、AIと一緒ならどこまで作れるのか。この記録で確かめるよ。</div></div>
+</div>
+<div class="box"><b>AI CREW</b><span>Human — Creative Direction / Playtest</span><span>ChatGPT — Planning / Design</span></div>
+<div class="box"><b>DEVELOPMENT STACK</b><span>Unity / C# / ChatGPT</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-002">RECORD 002 — LIKE A MOTHというゲームを考える</h2>
 <p>好きなゲームの要素を全部入れれば面白くなるわけではない。そこで、自分はゲームの何が好きなのかを考え直した。一つは、成長が目に見えること。もう一つは、役割の違う仲間がいること。</p>
