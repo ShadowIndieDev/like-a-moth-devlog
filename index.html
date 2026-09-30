@@ -277,24 +277,46 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 <h2 id="record-010">RECORD 010 — 仲間が増えると、探索の仕方まで変わる。</h2>
-<p>G、Treasure、Guild、Shopまでつながったところで、かなり早いとは思いつつ、新しい仲間のことを考え始めた。名前はエド。実は完全な新キャラクターではなく、プロジェクトのかなり初期から案だけは存在していたTreasure Hunterだ。</p>
-<p>当時考えていたのは、短剣で素早く戦い、敵からItemを盗み、Bombを投げるキャラクターだった。ただ、その頃のLIKE A MOTHにはまだ「盗んだGをどう扱うか」も「Treasureを探す意味」も「持ち帰ったものを使うGuild」もなかった。能力のアイデアはあっても、それを受け止めるゲーム側の仕組みが足りていなかった。</p>
-<p>Stage 2を作り、TreasureがRunごとに現れ、拾ったGがCarried Gとして危険にさらされ、Guildへ帰ればWalletとして確定するようになった。そこで改めてエドを見ると、初期案の意味がまったく違って見えた。</p>
-
+<p class="lead-note">G・Treasure・Guild・Shopがつながったところで、初期からあったTreasure Hunter「エド」の案を見直した。Steal・Bomb・Treasure・加入の方法を、探索が広がる方向で考えた。性能や価格は、まだ決めない。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、G、Treasure、Guild、Shopまでつながった。かなり早いとは思うけど、新しい仲間のことを考え始めたんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">エドだね。実は完全な新キャラクターじゃない。プロジェクトのかなり初期から、案だけはあったTreasure Hunterだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">短剣で素早く戦って、敵からItemを盗んで、Bombを投げる。当時考えてたのは、そういうキャラクターだった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">今の仕組みの上で見直すと、その初期案の意味がまったく違って見える。理由は、あとで事件ファイルで整理しよう。</div></div>
 <figure class="dev-shot"><img src="ed_character_concept.png" alt="LIKE A MOTHの新キャラクター、エドの将来構想をまとめたコンセプト紹介資料"><figcaption><span class="capture">CHARACTER CONCEPT — ED / TREASURE HUNTER</span><br>現在のMeta Progressionを前提に再構成したエドのコンセプト。画像内の能力・演出・50,000 Gなどの数値は構想・TEST表現であり、最終仕様ではない。</figcaption></figure>
-
-<p>例えばSteal。敵からGを盗めるなら、そのGはWalletへ直接入れるのではなくCarried Gにする。盗めば盗むほど稼げる。しかし、倒れれば失う。エドは金策に強いキャラクターであると同時に、「あと少し盗んでから帰るか」という欲まで増幅するキャラクターになる。</p>
-<p>Bombも、単なる攻撃技だけにはしたくない。遺跡にひび割れた壁を置き、爆破すると隠し部屋やTreasure、Archiveへの道が現れる。ただし、ここでエドを必須にはしたくない。エドを仲間にするとGuild Shopでも消費ItemのBombを扱えるようにし、誰でも同じ場所へ到達できるようにする。エドを編成すればBombを買わず、持込枠も使わずに済む。便利ではある。でも必須ではない。</p>
-<p>Treasureについても同じ考え方だ。Rare率を大幅に上げて「宝探しならエド一択」にするのではなく、Treasureを見つけやすくしたり、出現機会を少し増やしたりする方向を考えている。同じStageでも、誰を連れて行くかによって見る場所や寄り道の判断が少し変わる。それくらいが理想だ。</p>
-<p>そして、エドで一番やってみたいのが加入方法だ。彼はGuildのかなり序盤から姿を見せる。ただし、雇うには途方もなく高いGが必要になる。普通に先へ進むPlayerなら、すぐには手が届かない。でもTreasureを探し、何度も遺跡へ潜り、Gを貯め続ければ、かなり早い段階でも仲間にできる。</p>
-<p>Storyが進んだから自動的に加入するのではなく、「このキャラクターを早く使いたいから、今のStageをもう少し探索する」という選択肢を作りたい。逆に興味がなければ、そのまま先へ進んでもいい。いつエドを仲間にするか自体がPlayerの遊び方になる。</p>
-<p>これは今後のCharacter Designで大事にしたい考え方かもしれない。新しい仲間を手に入れることは、単に攻撃方法が一つ増えるだけではない。探索できる場所、見えるもの、持ち帰れるものまで少し広がる。</p>
-<p><b>Character Unlock = Exploration Expansion.</b></p>
-<p>まだエドの戦闘性能も、Steal率も、Bombの性能も、加入価格も決まっていない。むしろ今は決めない。先に「エドを仲間にしたことで、同じ遺跡をもう一度見に行きたくなるか」を作って確かめたい。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">まずSteal。敵からGを盗めるなら？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そのGはWalletへ直接入れずに、Carried Gにする。盗めば盗むほど稼げる。でも、倒れれば失う。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">金策に強いだけじゃなくて、「あと少し盗んでから帰るか」って欲まで大きくするキャラクターになるな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Bombはどうする？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ただの攻撃技にはしたくない。遺跡にひび割れた壁を置いて、爆破すると隠し部屋やTreasure、Archiveへの道が現れる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それだと、エドがいないと行けない場所ができるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そこはエドを必須にしたくない。エドを仲間にしたら、Guild Shopでも消費ItemのBombを扱えるようにして、誰でも同じ場所へ行けるようにする。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">エドを編成すれば、Bombを買わずに、持ち込みの枠も使わずに済む。便利ではあるけど、必須ではない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Treasureも同じ考え方だ。Rareの率を大きく上げて「宝探しならエド一択」にはしない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Treasureを見つけやすくしたり、出現の機会を少し増やしたりする方向で考えているんだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">同じStageでも、誰を連れて行くかで、見る場所や寄り道の判断が少し変わる。それくらいが理想だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それで、Shadowくんがエドで一番やってみたいのは？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">加入の方法だ。エドはGuildのかなり序盤から姿を見せる。でも、雇うには途方もなく高いGがいる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">普通に先へ進むプレイヤーなら、すぐには手が届かない。でもTreasureを探して、何度も遺跡へ潜って、Gを貯め続ければ、かなり早い段階でも仲間にできる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Storyが進んだから自動で加入するんじゃなくて、「このキャラクターを早く使いたいから、今のStageをもう少し探索する」って選択肢を作りたいんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">興味がなければ、そのまま先へ進んでもいい。いつエドを仲間にするか自体が、プレイヤーの遊び方になるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">これは、今後のCharacter Designで大事にしたい考え方かもしれない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">新しい仲間を手に入れることは、攻撃の方法がひとつ増えるだけじゃない。探索できる場所、見えるもの、持ち帰れるものまで少し広がる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そう。Character Unlock = Exploration Expansion.</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、エドの戦闘性能も、Stealの率も、Bombの性能も、加入の価格も、まだ決まっていないよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">むしろ今は決めない。先に「エドを仲間にしたことで、同じ遺跡をもう一度見に行きたくなるか」を作って確かめたい。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 初期案が眠っていた理由</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">では事件ファイルを開こう。エドの案はかなり初期からあったのに、なぜ今まで形にならなかったのか。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">その頃のLIKE A MOTHには、まだ「盗んだGをどう扱うか」も、「Treasureを探す意味」も、「持ち帰ったものを使うGuild」もなかったからだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。能力のアイデアはあっても、それを受け止めるゲーム側の仕組みが足りていなかった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そのあとStage 2を作って、TreasureがRunごとに現れて、拾ったGがCarried Gとして危険にさらされ、Guildへ帰ればWalletとして確定するようになった。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だから改めてエドを見たら、初期案の意味がまったく違って見えたんだな。</div></div>
+</div>
 <div class="box"><b>DESIGN PRINCIPLE</b><span>Ed = useful, not mandatory.</span><span>エドを使えば探索は便利になる。しかし、エドがいなければ到達できない必須進行にはしない。</span></div>
 <div class="box"><b>SYSTEM CONNECTION</b><span>Steal → Carried G / Treasure Sense → Exploration / Bomb → Secret Route / Recruitment → Wallet G / Bomb Shop Unlock → Guild</span></div>
 <div class="box"><b>STATUS</b><span>Future Character Direction — Human Supported / Gameplay & Balance Not Locked</span></div>
 <div class="box"><b>NEXT DEPTH</b><span>Ed Recruitment Architecture → Gameplay Prototype → Steal / Treasure Sense / Bomb</span></div>
+<p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 
 <h2 id="record-011">RECORD 011 — 誰を連れていくか。何を持っていくか。</h2>
