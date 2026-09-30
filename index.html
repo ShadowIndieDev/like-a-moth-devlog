@@ -103,11 +103,28 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-004">RECORD 004 — Cubeの世界から「封印された遺跡」へ</h2>
-<p>戦闘が動き始めると、次に気になったのは背景だった。そこでStage 1のEnvironment制作に入った。テーマは「封印された聖域」。冷たい石、Grey、Blue-grey、Dark Blue。そこへCyanとGoldの魔力。Orange / Redは危険表示に残す。</p>
-<p>StageはStart Area、Combat Zone、Central Ruins、Seal Area、Boss Gate、Boss Arenaへ進む。入口から奥へ行くほど柱が崩れ、像が壊れ、やがて封印装置が現れる。短いStageでも歩くだけで小さな物語が感じられるようにした。</p>
-<p>EnvironmentはGameplay Areaを完全3D、中遠景を軽量Low-poly architectureで補うHybrid 2.5D。敵もBasic、Heavy、Ranged、Chargerの4種類へ。最終的なtriangle数は480、518、410、494。細部より0.5秒で役割が分かるシルエットを優先した。</p>
-<p>この頃から「見た目を良くするためにゲームを壊してはいけない」と強く意識するようになった。変更前にCheckpointを作り、Scene hashを記録し、変更後にGameplayが変わっていないか確認する。Cubeと仮モデルだった画面が「自分のゲーム」に見え始めた時期だった。</p>
+<p class="lead-note">戦闘が動いたので、次は背景。Stage 1を「封印された聖域」に作り、敵も4種類にした。見た目を良くしても、ゲームは壊さない。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「オーパス君」と開発者Shadowの掛け合いに書き直したものです。オーパス君は開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">戦闘が動くようになったら、今度は背景が気になってきた。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">Stage 1のEnvironmentに入ろう。テーマは「封印された聖域」だね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">冷たい石、Grey、Blue-grey、Dark Blue。そこにCyanとGoldの魔力。Orange / Redは危険の表示に残しておく。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">道のりは、Start Area、Combat Zone、Central Ruins、Seal Area、Boss Gate、Boss Arena。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">入口から奥へ行くほど柱が崩れて、像が壊れて、やがて封印装置が現れる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">短いStageでも、歩くだけで小さな物語が感じられるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">作り方は？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">Hybrid 2.5Dだよ。遊ぶ場所（Gameplay Area）は完全な3Dで、中景と遠景は軽いLow-polyの建物で補う。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">敵も4種類になったよね。Basic、Heavy、Ranged、Charger。細かさより、0.5秒で役割が分かるシルエットを優先したい。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">うん、形を強くしてある。最終的なtriangle数は、下の「数字で見る」にまとめておくね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Cubeと仮モデルだった画面が、やっと「自分のゲーム」に見えてきた。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 見た目がゲームを壊さないように</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">この頃から、ひとつ強く気にしていたことがあるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「見た目を良くするために、ゲームを壊してはいけない」。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="オーパス君">オーパス君</div><div class="bubble">だから手順を決めた。変更の前にCheckpointを作る。Scene hashを記録する。変更の後に、Gameplayが変わっていないか確認する。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">見た目を良くしても、遊びは変えない。この順番は守っていこう。</div></div>
+</div>
 <div class="box"><b>TECH NOTE</b><span>Gameplay Area = 3D / Mid-Far Background = Lightweight Low-Poly</span></div>
+<div class="box"><b>数字で見る</b><span>敵4種のtriangle数：Basic 480・Heavy 518・Ranged 410・Charger 494。</span></div>
+<p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-005">RECORD 005 — 敵がいない。測ってみたら理由が違った</h2>
 <p>Stage 1を遊んでいると、途中から敵が少なくなり、何もいない時間が目立った。最初に疑ったのは、封印されたエリアの向こう側に敵がSpawnしていること。実際、そのバグは存在した。</p>
