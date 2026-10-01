@@ -153,71 +153,170 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-09-30 会話形式に改稿</p>
 
 <h2 id="record-006">RECORD 006 — 広くしただけでは、探索にはならなかった。</h2>
-<p>Stage 1が「最低限遊べるもの」として完成し、次に取りかかったのは地下都市の居住区だった。最初は単純に、Stage 1より少し広くし、敵と経験値を増やせば次のStageらしくなると思っていた。</p>
-<p>ところがGrayboxを実際に歩いてみると、Mapは広いのに先へ進む必要がなかった。敵が同じ場所へ供給され続けるので、入口付近で戦い続けても攻略できてしまう。住居や広場、設備を作っても、プレイヤーから見れば背景でしかない。</p>
-<p>そこでStage 2だけ、敵の出現を有限のZone Encounterへ変更した。新しい区画へ進むと敵が現れ、倒し切るとその場所は静かになる。戦闘が終わったら周囲を見る。枝道へ入り、壊れたInfrastructureを探す。そして先へ進む。</p>
-<p>Gimmickにも問題があった。電源復旧やShelterという設定自体は気に入っていたが、初見では何をすればよいのか分かりにくい。そこで非常放送を使った。「電源が落ちている」「保守電源盤で復旧してほしい」。場所そのものは言わず、赤い非常灯、床を流れる光、標識を手掛かりにする。</p>
-<p>再び遊ぶと、今度はMapの広さに意味が生まれた。その場で敵を狩り続けるのではなく、「次の区画を見に行こう」と思えるようになった。</p>
-<p>ただ、別の問題も見えた。Gimmickを見つけるまでは面白い。でも見つけた後は、数秒その場に立つだけ。探索はゲームになったが、復旧作業はまだ「作業」だった。</p>
+<p class="lead-note">Stage 2の居住区を作り始めた。広くしただけでは探索にならなかったので、敵の出方を区画ごとの有限の戦闘に変え、非常放送で「何をすればいいか」を伝えた。探索はゲームになったが、復旧はまだ「作業」だった。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、Stage 1が「最低限遊べるもの」として完成した。次は地下都市の居住区だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Stage 2だね。最初はどう作るつもりだった？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">単純に考えてたよ。Stage 1より少し広くして、敵と経験値を増やせば、次のStageらしくなるって。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それで、Grayboxを実際に歩いてみてどうだった？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Mapは広いのに、先へ進む必要がなかったんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それは事件だね。手がかりを順番に見ていこう。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG 1 — 広いのに、先へ進む理由がない</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">1つ目の手がかり。敵が同じ場所へ供給され続けている。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ってことは、入口のあたりで戦い続けても……。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">攻略できてしまう。2つ目の手がかり。住居も広場も設備も作ったのに、プレイヤーから見れば背景でしかない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">RPGで言うと、町の入口で敵を狩り続けるだけでクリアできちゃう感じか。せっかくの街並みが、ただの壁紙だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">広いMapを作ることと、探索する価値を作ることは、別だったんだね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そこでStage 2だけ、敵の出方を有限のZone Encounterに変えた。新しい区画へ進むと敵が現れて、倒し切るとその場所は静かになる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">静かになったら、周りを見る。枝道へ入って、壊れた設備（Infrastructure）を探す。そして先へ進む。</div></div>
+</div>
+<div class="anomaly"><h3>ANOMALY LOG 2 — 何をすればいいのか分からない</h3>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">もうひとつ、Gimmickにも問題があった。電源の復旧やShelterって設定自体は気に入ってるんだけど。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">初見では、何をすればいいのか分かりにくいんだよね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そこで非常放送を使った。「電源が落ちている」「保守電源盤で復旧してほしい」。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、場所は言わないんだよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">うん。場所そのものは言わない。赤い非常灯、床を流れる光、標識。それを手がかりにしてもらう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それでもう一度遊んだら、今度はMapの広さに意味が生まれた。その場で敵を狩り続けるんじゃなくて、「次の区画を見に行こう」って思えたんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、別の問題も見えたね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Gimmickを見つけるまでは面白い。でも見つけたあとは、数秒その場に立つだけなんだよ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">探索はゲームになった。でも復旧作業は、まだ「作業」のままだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">探索がゲームになったなら、次は復旧の番だな。</div></div>
+</div>
 <div class="box"><b>ANOMALY LOG</b><span>広いMapを作ることと、探索する価値を作ることは別だった。</span></div>
 <div class="box"><b>AI CREW</b><span>Human — Playtest / Gameplay judgment</span><span>Opus 5.5 — Foundation / Graybox / automated QA</span><span>GPT-6 Sol — Direction / integration planning</span></div>
 <div class="box"><b>DEVELOPMENT STACK</b><span>Unity 6 / C# / Zone Encounter / Telemetry / Project Memory</span></div>
+<p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 <h2 id="record-007">RECORD 007 — 敵に囲まれたまま、電源を入れる。</h2>
-<p>「復旧が作業になっている」という問題に対して、次に試したのは単純だった。敵を全部倒さなくても、電源を復旧できるようにする。</p>
-<p>安全にやるなら、周囲の敵を排除してから操作盤へ向かう。時間はかかるが確実だ。一方、敵が残ったまま復旧を始めることもできる。復旧中は移動が遅くなり、通常攻撃も使えない。AIの仲間は戦い続ける。被弾すれば作業が中断し、進捗も少し戻される。</p>
-<p>これで初めて、「敵を先に倒すか、それとも今ここで復旧を強行するか」という判断が生まれた。</p>
-<p>実際に遊んで特に良かったのは、復旧そのものより、その直後だった。Gimmickを解除すると大量のEXPが入り、個人LevelとParty Levelが一気に上がる。敵に囲まれた不利な状況で復旧を強行し、成功した瞬間に成長して形勢をひっくり返す。この流れには、想定していた以上の爽快感があった。</p>
-<p>そこで報酬の見せ方も変えた。非常放送は「第二区画、電力供給を確認」と世界の出来事だけを伝える。一方、ゲーム側はINFRASTRUCTURE RESTORED、獲得EXP、Stage Progressの増加を明確に表示する。世界観の説明と、プレイヤーに必要なゲーム情報を分けることにした。</p>
-<p>同時に、同じMapでも毎Run少し状況が変わる仕組みも試している。Shelterが使えるRun、別の設備だけが動くRun、報酬がItem・回復・EXPで変わるRun。MapそのものをProcedural生成するのではなく、「同じ地下都市だが、今回どこが生きているかが少し違う」という考え方だ。</p>
-<p>Stage 2のGrayboxは、ここで一つの区切りを迎えた。最初は「Stage 1を広くしたもの」だった。それがHuman Playtestを繰り返すうちに、進む、戦う、静かになる、探索する、危険を取るか判断する、設備を復旧する、世界が変わる、という独自のLoopへ変わった。</p>
-<p>そして次に考えているのは、なぜ一度クリアした遺跡へもう一度戻るのか、という問題だ。敵や設備からGを回収する。ランダムに現れるTreasureを探す。Rareな発見物は持ち帰る。遺跡調査ギルドで準備を整え、もう一度深層へ向かう。</p>
-<p>まだ実装は始まったばかりだが、LIKE A MOTHは「一つのStageを遊べるゲーム」から、「何度も遺跡へ戻りたくなるゲーム」を考える段階へ進み始めた。</p>
+<p class="lead-note">敵が残っていても電源を復旧できるようにして、「先に倒すか、今ここで強行するか」の判断を作った。復旧の直後に一気に成長する流れが想像以上に気持ちよく、報酬の見せ方も変えた。Stage 2のGrayboxは、ここで一区切り。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、復旧が「作業」になってる問題、どうしようか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">次に試したのは単純な方法だよ。敵を全部倒さなくても、電源を復旧できるようにする。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">安全にやるなら、周りの敵を片付けてから操作盤へ向かう。時間はかかるけど確実だよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">一方で、敵が残ったまま復旧を始めることもできる。ただし復旧中は移動が遅くなって、通常攻撃も使えない。AIの仲間は戦い続ける。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そこで殴られたら？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">作業が中断して、進捗も少し戻される。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">なるほど。「敵を先に倒すか、それとも今ここで復旧を強行するか」。これで初めて、判断が生まれたな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">同じ頃、同じMapでも毎Run少し状況が変わる仕組みも試しているね。Shelterが使えるRun、別の設備だけが動くRun、報酬がItem・回復・EXPで変わるRun。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Mapそのものを自動で作る（Procedural生成）わけじゃないんだよね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">うん。「同じ地下都市だけど、今回どこが生きているかが少し違う」という考え方だよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Stage 2のGrayboxも、これで一区切りか。最初は「Stage 1を広くしたもの」だったのにな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Human Playtestを繰り返すうちに、独自のLoopに変わったね。進む、戦う、静かになる、探索する、危険を取るか判断する、設備を復旧する、世界が変わる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、次に考えてるのは、一度クリアした遺跡へ、なぜもう一度戻るのか、だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">敵や設備からGを回収する。ランダムに現れるTreasureを探す。Rareな発見物は持ち帰る。遺跡調査ギルドで準備を整えて、もう一度深層へ向かう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">実装はまだ始まったばかりだけど、「一つのStageを遊べるゲーム」から、「何度も遺跡へ戻りたくなるゲーム」を考える段階に進み始めたな。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 気持ちよかったのは、復旧の直後</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">この区切りの前に、実際に遊んで分かったことがあったね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">特に良かったのは、復旧そのものより、その直後なんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">手がかりはEXPだね。Gimmickを解除すると大量のEXPが入って、個人LevelとParty Levelが一気に上がる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">敵に囲まれた不利な状況で復旧を強行して、成功した瞬間に成長して形勢をひっくり返す。想定してた以上に爽快だった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">だから報酬の見せ方も変えた。非常放送は「第二区画、電力供給を確認」と、世界の出来事だけを伝える。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">一方で、ゲームの画面にはINFRASTRUCTURE RESTORED、獲得EXP、Stage Progressの増加をはっきり出す。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">世界の説明は放送で、プレイヤーに必要なゲームの情報は画面で。この2つは分けていこう。</div></div>
+</div>
 <div class="box"><b>TECH NOTE</b><span>Stage 2 Core Gameplay Loop Prototype — HUMAN ACCEPTED WITH DEFERRED BALANCE / PRESENTATION</span></div>
 <div class="box"><b>NEXT DEPTH</b><span>Meta Progression — Save / G / RunLoot / Treasure / Guild / Shop</span></div>
 <div class="box"><b>AI CREW</b><span>Human — Human Gate / final feel</span><span>Opus 5.5 — Revision implementation / QA / architecture review</span><span>GPT-6 Sol — design decisions / next-phase architecture</span></div>
+<p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 <h2 id="record-008">RECORD 008 — 拾ったGは、まだ自分のものではない。</h2>
-<p>Stage 2の探索が形になってくると、次に気になったのは「なぜ同じ遺跡へもう一度行くのか」だった。Stageをクリアするだけなら、一度先へ進めば十分だ。そこで、Runの外まで続く報酬を作り始めた。</p>
-<p>まずGを追加した。ただし、拾った瞬間に自分の資産になるわけではない。Dungeonで手に入れたGは <b>Carried G</b>。Clearして初めてWalletへ入る。倒れたり撤退したりすればLost Gになる。一方、ItemやRareな発見物はその場で永久取得する。「通貨は危険にさらされる。でも発見そのものは奪わない」というルールにした。</p>
-<p>Treasureも、完全なランダム配置にはしなかった。固定Mapの中に候補地点を置き、Runごとにその一部だけが現れる。同じ地下居住区なのに、今日はあの路地に宝箱があるかもしれない。Mapを覚えることと、毎回少し探すことを両立させたかった。</p>
+<p class="lead-note">同じ遺跡へもう一度行く理由として、Runの外まで続く報酬を作り始めた。拾ったGはClearするまで「Carried G」で、倒れれば失う。Treasureは固定の候補地点から、Runごとに一部だけが現れる。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、Stage 2の探索が形になってきたら、次に気になってきたことがある。なんで同じ遺跡へもう一度行くんだろう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Stageをクリアするだけなら、一度先へ進めば十分だからね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だったら、Runの外まで続く報酬を作ろう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">まずはGを足したよ。ただし、拾った瞬間に自分のものになるわけじゃない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Dungeonで手に入れたGは「Carried G」。Clearして初めてWalletに入る。倒れたり撤退したりすれば、Lost Gになる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">厳しいな。拾ったItemも取られるの？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ItemとRareな発見物は、その場で永久に手に入る。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「通貨は危険にさらされる。でも発見そのものは奪わない」。このルールでいこう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Treasureも、完全なランダムにはしなかった。固定のMapの中に候補の地点を置いて、Runごとにその一部だけが現れる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">同じ地下居住区なのに、今日はあの路地に宝箱があるかもしれない、ってことか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。Mapを覚えることと、毎回少し探すことを両立させたかったんだ。</div></div>
 <figure class="dev-shot"><img src="treasure_carried_g.png" alt="Stage 2でTreasureから30Gを回収しCarried G HUDへ反映された開発画面"><figcaption><span class="capture">DEVELOPMENT CAPTURE — M2/M2.1</span><br>Treasureから30Gを回収した直後。左上には常時表示のCarried G。まだWalletには入っていない。</figcaption></figure>
-<p>試遊してみると、Gは常時見えていた方がよかった。30G、60G、90Gと増えるほど「ここで死にたくない」という感覚が生まれる。Dark fantasyの緊張感を、単純な難易度ではなく「持ち帰りたいものがある」ことで作れるようになってきた。</p>
-<p>宝箱の見た目はまだGrayboxに近い。背景Objectと見分けづらい場面もあるし、Rareも最終的にはもっと光やEffectで特別にしたい。ただ、仕組みとしては「寄り道する理由」が一つ増えた。これはかなり大きかった。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">試遊してみたら、Gは常に見えている方がよかった。30G、60G、90Gと増えるほど、「ここで死にたくない」って気持ちになる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Dark fantasyの緊張感を、単純な難易度じゃなく、「持ち帰りたいものがある」ことで作れるようになってきたね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">たった90Gで、もう命が惜しい。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 宝箱が背景にまぎれる</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、ひとつ課題が残ったね。宝箱の見た目は、まだGrayboxに近い。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">背景のObjectと見分けにくい場面があったよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">仕組みは動いた。でもGrayboxでは、背景との区別が弱い。見た目は本番の見せ方（Production Presentation）の段階へ繰り越すよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Rareも、最終的にはもっと光やEffectで特別にしたい。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも仕組みとしては、「寄り道する理由」がひとつ増えた。これはかなり大きい。</div></div>
+</div>
 <div class="box"><b>TECH NOTE</b><span>Spawn候補地点は固定、Active地点と中身はseeded。Spawn RNGとContent RNGは分離。</span><span>Carried G → ClearでWallet / Game Over・WithdrawalでLost G。</span></div>
 <div class="box"><b>ANOMALY LOG</b><span>Treasureの仕組みは機能したが、Grayboxでは背景との識別が弱い。Production Presentationへ繰り越し。</span></div>
+<p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 <h2 id="record-009">RECORD 009 — 遺跡の外にも、ゲームを作る。</h2>
-<p>GとTreasureを作ったことで、次の問題は自然に決まった。持ち帰ったものを、どこで使うのか。</p>
-<p>そこで「遺跡調査ギルド」の最小版を作った。まだ完成した3D拠点ではない。床と壁、四つの台、そして大きなUI。WALLET、SHOP、LOADOUT、EXPEDITION BOARD。見た目は完全にPrototypeだが、ゲーム全体の循環を確かめるには十分だった。</p>
+<p class="lead-note">持ち帰ったGを使う場所として、「遺跡調査ギルド」の最小版を作った。探索から帰還、買い物、準備、再探索までが初めて一本につながり、その基盤がエドの設計まで変え始めた。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">GとTreasureができたら、次の問題は自然に決まったな。持ち帰ったものを、どこで使うのか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">だから「遺跡調査ギルド」の最小版を作ったよ。まだ完成した3Dの拠点じゃない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">床と壁、四つの台、それと大きなUIだけだもんな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">UIはWALLET、SHOP、LOADOUT、EXPEDITION BOARD。見た目は完全にPrototypeだけど、ゲーム全体の循環を確かめるには十分だった。</div></div>
 <figure class="dev-shot"><img src="guild_hub_lite.png" alt="遺跡調査ギルドHub-liteの開発画面。Wallet Shop Loadout Expedition Boardが表示されている"><figcaption><span class="capture">DEVELOPMENT CAPTURE — M3 HUB-LITE</span><br>最初の遺跡調査ギルド。完成した拠点ではなく、Wallet・Shop・Loadout・出発を一本につなぐための実験場。</figcaption></figure>
-<p>Dungeonで持っているのはCarried G。Guildに戻ればWallet G。ShopではWalletだけを使う。消耗品を買い、持込枠にセットし、掲示板から次の探索へ出る。Stage 2でTreasureを拾い、Clearして帰還するとWalletが増えている。</p>
-<p>これで初めて、LIKE A MOTHに「探索 → 戦利品 → 帰還 → 買い物 → 準備 → 再探索」というLoopが一本につながった。</p>
-<p>面白いのは、この基盤が新しいCharacterの設計まで変え始めたことだ。初期に考えていたTreasure Hunterのエドは、敵からGを盗む、Treasureを見つけやすくする、Bombで隠し部屋を開く、といった能力を持たせられる。しかも彼自身を非常に高額なGで雇えるCharacterにすれば、「頑張れば序盤から解放できる」というPlayer自身の目標にもなる。</p>
-<p>Stageを増やすだけではなく、Stageの外側にある仕組みが、Stageの遊び方まで変えていく。個人的には、ここでようやく「一周して終わるPrototype」から「何度も潜りたくなるゲーム」へ一歩進んだ感覚がある。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">お金の流れを整理させて。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Dungeonで持っているのはCarried G。Guildに戻ればWallet G。ShopではWalletだけを使う。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、消耗品を買って、持ち込みの枠にセットして、掲示板から次の探索へ出る。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Stage 2でTreasureを拾って、Clearして帰ってくると、Walletが増えている。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">RPGで言うと、ダンジョンで稼いで、町で買い物して、また潜る。あの流れだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">探索、戦利品、帰還、買い物、準備、再探索。LIKE A MOTHで初めて、このLoopが一本につながったね。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 基盤が、仲間の設計を変え始めた</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">面白いことが起きたね。この基盤が、新しいCharacterの設計まで変え始めた。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">エドのことだよな。初期に考えてたTreasure Hunter。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。敵からGを盗む、Treasureを見つけやすくする、Bombで隠し部屋を開く。今なら、そういう能力を持たせられる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">しかもエド自身を、すごく高いGで雇えるCharacterにしたら？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">「頑張れば序盤から解放できる」という、プレイヤー自身の目標にもなるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Stageを増やすだけじゃなくて、Stageの外側にある仕組みが、Stageの遊び方まで変えていくんだな。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">個人的には、ここでやっと「一周して終わるPrototype」から、「何度も潜りたくなるゲーム」へ一歩進んだ感じがする。</div></div>
+</div>
 <div class="box"><b>AI CREW</b><span>Opus 5.5 — Save / Treasure / Hub-lite implementation and automated QA</span><span>GPT-6 Sol — Meta progression / economy / character-system direction</span><span>Human — Playtest / risk-reward and progression decisions</span></div>
 <div class="box"><b>DEVELOPMENT STACK</b><span>Unity 6 / C# / MetaSave / Seeded Treasure / Wallet & RunLoot / Hub-lite</span></div>
 <div class="box"><b>NEXT DEPTH</b><span>Ed — Recruitment Architecture / Exploration Expansion</span></div>
+<p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 <h2 id="record-010">RECORD 010 — 仲間が増えると、探索の仕方まで変わる。</h2>
-<p>G、Treasure、Guild、Shopまでつながったところで、かなり早いとは思いつつ、新しい仲間のことを考え始めた。名前はエド。実は完全な新キャラクターではなく、プロジェクトのかなり初期から案だけは存在していたTreasure Hunterだ。</p>
-<p>当時考えていたのは、短剣で素早く戦い、敵からItemを盗み、Bombを投げるキャラクターだった。ただ、その頃のLIKE A MOTHにはまだ「盗んだGをどう扱うか」も「Treasureを探す意味」も「持ち帰ったものを使うGuild」もなかった。能力のアイデアはあっても、それを受け止めるゲーム側の仕組みが足りていなかった。</p>
-<p>Stage 2を作り、TreasureがRunごとに現れ、拾ったGがCarried Gとして危険にさらされ、Guildへ帰ればWalletとして確定するようになった。そこで改めてエドを見ると、初期案の意味がまったく違って見えた。</p>
-
+<p class="lead-note">G・Treasure・Guild・Shopがつながったところで、初期からあったTreasure Hunter「エド」の案を見直した。Steal・Bomb・Treasure・加入の方法を、探索が広がる方向で考えた。性能や価格は、まだ決めない。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、G、Treasure、Guild、Shopまでつながった。かなり早いとは思うけど、新しい仲間のことを考え始めたんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">エドだね。実は完全な新キャラクターじゃない。プロジェクトのかなり初期から、案だけはあったTreasure Hunterだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">短剣で素早く戦って、敵からItemを盗んで、Bombを投げる。当時考えてたのは、そういうキャラクターだった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">今の仕組みの上で見直すと、その初期案の意味がまったく違って見える。理由は、あとで事件ファイルで整理しよう。</div></div>
 <figure class="dev-shot"><img src="ed_character_concept.png" alt="LIKE A MOTHの新キャラクター、エドの将来構想をまとめたコンセプト紹介資料"><figcaption><span class="capture">CHARACTER CONCEPT — ED / TREASURE HUNTER</span><br>現在のMeta Progressionを前提に再構成したエドのコンセプト。画像内の能力・演出・50,000 Gなどの数値は構想・TEST表現であり、最終仕様ではない。</figcaption></figure>
-
-<p>例えばSteal。敵からGを盗めるなら、そのGはWalletへ直接入れるのではなくCarried Gにする。盗めば盗むほど稼げる。しかし、倒れれば失う。エドは金策に強いキャラクターであると同時に、「あと少し盗んでから帰るか」という欲まで増幅するキャラクターになる。</p>
-<p>Bombも、単なる攻撃技だけにはしたくない。遺跡にひび割れた壁を置き、爆破すると隠し部屋やTreasure、Archiveへの道が現れる。ただし、ここでエドを必須にはしたくない。エドを仲間にするとGuild Shopでも消費ItemのBombを扱えるようにし、誰でも同じ場所へ到達できるようにする。エドを編成すればBombを買わず、持込枠も使わずに済む。便利ではある。でも必須ではない。</p>
-<p>Treasureについても同じ考え方だ。Rare率を大幅に上げて「宝探しならエド一択」にするのではなく、Treasureを見つけやすくしたり、出現機会を少し増やしたりする方向を考えている。同じStageでも、誰を連れて行くかによって見る場所や寄り道の判断が少し変わる。それくらいが理想だ。</p>
-<p>そして、エドで一番やってみたいのが加入方法だ。彼はGuildのかなり序盤から姿を見せる。ただし、雇うには途方もなく高いGが必要になる。普通に先へ進むPlayerなら、すぐには手が届かない。でもTreasureを探し、何度も遺跡へ潜り、Gを貯め続ければ、かなり早い段階でも仲間にできる。</p>
-<p>Storyが進んだから自動的に加入するのではなく、「このキャラクターを早く使いたいから、今のStageをもう少し探索する」という選択肢を作りたい。逆に興味がなければ、そのまま先へ進んでもいい。いつエドを仲間にするか自体がPlayerの遊び方になる。</p>
-<p>これは今後のCharacter Designで大事にしたい考え方かもしれない。新しい仲間を手に入れることは、単に攻撃方法が一つ増えるだけではない。探索できる場所、見えるもの、持ち帰れるものまで少し広がる。</p>
-<p><b>Character Unlock = Exploration Expansion.</b></p>
-<p>まだエドの戦闘性能も、Steal率も、Bombの性能も、加入価格も決まっていない。むしろ今は決めない。先に「エドを仲間にしたことで、同じ遺跡をもう一度見に行きたくなるか」を作って確かめたい。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">まずSteal。敵からGを盗めるなら？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そのGはWalletへ直接入れずに、Carried Gにする。盗めば盗むほど稼げる。でも、倒れれば失う。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">金策に強いだけじゃなくて、「あと少し盗んでから帰るか」って欲まで大きくするキャラクターになるな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Bombはどうする？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ただの攻撃技にはしたくない。遺跡にひび割れた壁を置いて、爆破すると隠し部屋やTreasure、Archiveへの道が現れる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それだと、エドがいないと行けない場所ができるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そこはエドを必須にしたくない。エドを仲間にしたら、Guild Shopでも消費ItemのBombを扱えるようにして、誰でも同じ場所へ行けるようにする。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">エドを編成すれば、Bombを買わずに、持ち込みの枠も使わずに済む。便利ではあるけど、必須ではない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Treasureも同じ考え方だ。Rareの率を大きく上げて「宝探しならエド一択」にはしない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Treasureを見つけやすくしたり、出現の機会を少し増やしたりする方向で考えているんだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">同じStageでも、誰を連れて行くかで、見る場所や寄り道の判断が少し変わる。それくらいが理想だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それで、Shadowくんがエドで一番やってみたいのは？</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">加入の方法だ。エドはGuildのかなり序盤から姿を見せる。でも、雇うには途方もなく高いGがいる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">普通に先へ進むプレイヤーなら、すぐには手が届かない。でもTreasureを探して、何度も遺跡へ潜って、Gを貯め続ければ、かなり早い段階でも仲間にできる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Storyが進んだから自動で加入するんじゃなくて、「このキャラクターを早く使いたいから、今のStageをもう少し探索する」って選択肢を作りたいんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">興味がなければ、そのまま先へ進んでもいい。いつエドを仲間にするか自体が、プレイヤーの遊び方になるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">これは、今後のCharacter Designで大事にしたい考え方かもしれない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">新しい仲間を手に入れることは、攻撃の方法がひとつ増えるだけじゃない。探索できる場所、見えるもの、持ち帰れるものまで少し広がる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そう。Character Unlock = Exploration Expansion.</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、エドの戦闘性能も、Stealの率も、Bombの性能も、加入の価格も、まだ決まっていないよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">むしろ今は決めない。先に「エドを仲間にしたことで、同じ遺跡をもう一度見に行きたくなるか」を作って確かめたい。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 初期案が眠っていた理由</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">では事件ファイルを開こう。エドの案はかなり初期からあったのに、なぜ今まで形にならなかったのか。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">その頃のLIKE A MOTHには、まだ「盗んだGをどう扱うか」も、「Treasureを探す意味」も、「持ち帰ったものを使うGuild」もなかったからだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。能力のアイデアはあっても、それを受け止めるゲーム側の仕組みが足りていなかった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そのあとStage 2を作って、TreasureがRunごとに現れて、拾ったGがCarried Gとして危険にさらされ、Guildへ帰ればWalletとして確定するようになった。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だから改めてエドを見たら、初期案の意味がまったく違って見えたんだな。</div></div>
+</div>
 <div class="box"><b>DESIGN PRINCIPLE</b><span>Ed = useful, not mandatory.</span><span>エドを使えば探索は便利になる。しかし、エドがいなければ到達できない必須進行にはしない。</span></div>
 <div class="box"><b>SYSTEM CONNECTION</b><span>Steal → Carried G / Treasure Sense → Exploration / Bomb → Secret Route / Recruitment → Wallet G / Bomb Shop Unlock → Guild</span></div>
 <div class="box"><b>STATUS</b><span>Future Character Direction — Human Supported / Gameplay & Balance Not Locked</span></div>
 <div class="box"><b>NEXT DEPTH</b><span>Ed Recruitment Architecture → Gameplay Prototype → Steal / Treasure Sense / Bomb</span></div>
+<p class="dialog-note">2026-10-01 会話形式に改稿</p>
 
 
 <h2 id="record-011">RECORD 011 — 誰を連れていくか。何を持っていくか。</h2>
