@@ -79,30 +79,31 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-003">RECORD 003 — AIと最初の戦闘を作る</h2>
-<p class="lead-note">最初の戦闘を作った。4人が一緒に戦い、Freeze → Shatterが画面の中で起きた。LIKE A MOTHが初めて「動くゲーム」になった。</p>
+<p class="lead-note">最初の戦闘を作った。4人が一緒に戦い、凍結 → 粉砕が画面の中で起きた。LIKE A MOTHが初めて「動くゲーム」になった。</p>
 <p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、最初に形にしたいのは、4人が一緒に戦っている状態なんだ。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">役割はこうだったね。Alexは前線、JudgeはFreeze、EclairはBleed、LumieraはHeal。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、Judgeが敵を凍らせて、Alexの攻撃で砕けて、Shatterが出る。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">役割はこうだったね。Alexは前線、Judgeは凍結、Eclairは出血、Lumieraは回復。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、Judgeが敵を凍らせて、Alexの攻撃で砕けて、粉砕が出る。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">出たね。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">自分で考えたルールが画面の中で起きた。完成したゲームを遊ぶのとは、違う嬉しさがあるな。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">この頃から、AIへの頼み方も変わったね。「コードを書いて」だけじゃなく、変更前を保存して、触ってはいけない部分を指定して、実装したあとにテストする。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Checkpointと回帰確認だよね。AIに開発の工程の一部を任せられるようになった。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">同時に、BlenderでLow-polyのキャラクターも作り始めた。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">チェックポイント（変える前の保存）と回帰確認だよね。AIに開発の工程の一部を任せられるようになった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">同時に、Blenderでローポリ（少ない面で作る3D）のキャラクターも作り始めた。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ゲーム中の距離からでも、髪色、武器、衣装、シルエットで誰なのか分かるのを優先した。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">UIも背景も音も、まだ仮のままだけどね。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それでも、4人がいて、敵がいて、仲間が動いて、連携が起きる。LIKE A MOTHが初めて「動くゲーム」になった。</div></div>
-<div class="anomaly"><h3>ANOMALY LOG — Bleedの差が弱い</h3>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">この頃の事件をひとつ開こう。Bleedは、最初から今の仕様じゃなかった。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">最初はRuptureを起こすための印に近くて、継続ダメージすらなかったんだよね。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG — 出血の差が弱い</h3>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">この頃の事件をひとつ開こう。出血は、最初から今の仕様じゃなかった。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">最初は破裂を起こすための印に近くて、継続ダメージすらなかったんだよね。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。それで遊んでみたら？</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「Freezeとの差が弱い」って感じた。だからDoTを追加した。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「凍結との差が弱い」って感じた。だから継続ダメージを追加した。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">作る、遊ぶ、違和感を見つける、変える。その繰り返しだね。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">遊んで違和感があったら変える。これからもこのやり方でいこう。</div></div>
 </div>
 <div class="box"><b>AI CREW</b><span>GPT系 — C# / Runtime / QA</span><span>3D Production Support — Blender workflow</span><span>Human — Playtest / Direction</span></div>
 <div class="box"><b>DEVELOPMENT STACK</b><span>Unity 6 / URP / C# / Blender / ChatGPT</span></div>
 <p class="dialog-note">2026-09-30 会話形式に改稿</p>
+<p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-004">RECORD 004 — Cubeの世界から「封印された遺跡」へ</h2>
 <p class="lead-note">戦闘が動いたので、次は背景。Stage 1を「封印された聖域」に作り、敵も4種類にした。見た目を良くしても、ゲームは壊さない。</p>
