@@ -320,27 +320,70 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 
 
 <h2 id="record-011">RECORD 011 — 誰を連れていくか。何を持っていくか。</h2>
-<p>エドを雇えるようになって、仲間は5人になった。ただし、出撃できるのはこれまでどおり4人。操作する1人と、AIの仲間3人だ。Rosterは増えても、Active Partyは4人のまま。ここで初めて「誰を置いていくか」という問題が出てきた。</p>
-<p>最初の試作では、エドを出すとルミエラが自動的に外れる仮の規則にしていた。動かすだけならそれで足りる。でも、これでは回復役のいないRunしか作れない。そこで出発前に編成パネルを開き、待機させる1人を自分で選べるようにした。</p>
-<figure class="dev-shot"><img src="record011_formation.png" alt="Party Formationの開発画面。操作キャラのエドとAI仲間のアレックス・ジャッジ・ルミエラが出撃し、エクレールが待機している"><figcaption><span class="capture">DEVELOPMENT CAPTURE — E1.5 PARTY FORMATION</span><br>出撃する4人と、待機する1人を選ぶ画面。下には持込の3枠。表示はPrototype、アイテムはすべてTEST。</figcaption></figure>
-<p>ルミエラを連れていけば、回復は安定する。外せば、探索と火力と現地調達に寄せたRunになる代わりに、回復は不安定になる。誰を置いていくかが、そのままRunの組み立てになった。ただし今のPrototypeでは、アレックスは常に出撃し、エドは操作キャラ専用という制約がある。ここはまだ決めていない。</p>
-<p>持ち込む消耗品の枠も作り直した。HEAL、BOMB、REVIVEのように用途ごとの枠を用意するのではなく、何でも入る汎用の3枠にした。持ち込める上限はアイテムごとのデータで決める。同じアイテムを2つの枠には入れられないが、空き枠はあっていい。出発しただけでは減らず、使ったときだけ1個減る。アイテムが増えても、データを足せば同じ枠に並べられる。</p>
-<p>回復薬、爆弾、蘇生の羽。何を持っていくかで悩めるようになった。問題は、その前に買う金がないことだった。</p>
-<p>Run中に拾うアイテムは、別のルールにした。取った瞬間に発動し、2つ目の持ち物リストは作らない。出発前に選んで持ち込み、Run中に自分で使うのが消耗品。拾ったらその場で効くのがRun Item。役割を分けておくと、画面もルールも増えすぎない。</p>
-<p>回復薬は、最初は使った瞬間に自動で対象を決める方式だった。手軽ではある。でも、誰を助けるかという判断がゲームから消える。Humanの判断で、ここは手動で選ぶ方式に変えた。考える一瞬そのものに、戦術的な意味があるからだ。</p>
-<figure class="dev-shot"><img src="record011_target_select.png" alt="回復薬の対象選択の開発画面。戦闘がスローになり、HPの割合が最も低いジャッジにカーソルがある"><figcaption><span class="capture">DEVELOPMENT CAPTURE — E1.5.2 TARGET SELECT</span><br>回復薬の枠を押すと、戦闘が強いスローになり、4人のHPが並ぶ。最初のカーソルはHPの割合が最も低い仲間。画面のHPはQAで作った状況。</figcaption></figure>
-<p>選んでいる間は、戦闘を強いスローにした。止まるわけではない。敵はゆっくり動き続けている。HPが満タンの仲間は選べず、やめれば何も減らない。倒れた仲間が2人いるときの蘇生の羽も、同じ画面で誰を起こすかを選ぶ。</p>
-<p>エドには、自分で盗みの好機を作る手段を持たせた。これまでは、ジャッジの凍結かエクレールの出血で敵が弱っているときに盗みやすくなる仕組みだった。今回、エドの爆弾に短いよろめきを付けた。爆弾を当て、敵がよろめいている間に短剣を当てれば、盗みやすくなる。</p>
-<p>凍結、出血、よろめきは、どれか1つあれば同じ好機として扱う。重ねても確率は上がらない。爆弾そのものでは盗めないし、Bossはよろめかない。エドは1人でも好機を作れるが、ジャッジやエクレールと組めば好機は増える。盗めるものは少しのGか、生命の聖杯。聖杯は拾ったその場でパーティを回復する。</p>
-<p>試遊して分かったことがいくつかある。エドは打たれ弱い。でも、その脆さが良い緊張感になっていた。追い詰められたところで運よく聖杯を盗めると、そこから立て直せる。これがかなり気持ちいい。消耗品なしだとRunは苦しく、持っていけば値段に見合うだけの余裕が生まれる。3枠の使い勝手も良かった。</p>
-<p>ただし、決めたのは方向性だけだ。回復量、値段、持込の上限、盗みの確率、よろめきの長さ、スローの倍率。数値はすべてまだTESTで、これから調整する。</p>
+<p class="lead-note">エドが加わって仲間は5人になったが、出撃は4人のまま。待機させる1人を自分で選べるようにし、持ち込む消耗品を何でも入る3つの枠にし、回復薬の対象は手で選ぶ形に変えた。エドには、爆弾で自分から好機を作る手段を持たせた。</p>
+<p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、エドを雇えるようになった。これで仲間は5人だ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">おめでとう。ただ、出撃できるのはこれまでどおり4人だね。操作する1人と、AIの仲間3人。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">雇った仲間は増えても、出撃する4人の枠は増えない……ってことは。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。ここで初めて「誰を置いていくか」という問題が出てきたんだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">最初の試作だと、エドを出すとルミエラが自動で外れる仮の規則だったよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">動かすだけなら、それで足りた。でもそれだと、回復役のいない挑戦しか作れない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だから出発の前に編成のパネルを開いて、待機させる1人を自分で選べるようにした。</div></div>
+<figure class="dev-shot"><img src="record011_formation.png" alt="出撃の編成（Party Formation）の開発画面。操作キャラのエドとAI仲間のアレックス・ジャッジ・ルミエラが出撃し、エクレールが待機している"><figcaption><span class="capture">DEVELOPMENT CAPTURE — E1.5 PARTY FORMATION</span><br>出撃する4人と、待機する1人を選ぶ画面。下には持込の3枠。表示は試作、アイテムはすべて仮（TEST）。</figcaption></figure>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ルミエラを連れていけば、回復は安定する。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">外せば、探索と火力と現地での調達に寄せた挑戦になる。その代わり、回復は不安定になる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">誰を置いていくかが、そのまま挑戦の組み立てになったね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、今の試作では、アレックスは必ず出撃するし、エドは操作するキャラクター専用だ。ここはまだ決めていない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">持ち込む消耗品の枠も作り直したよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">うん。回復・爆弾・蘇生のように用途ごとの枠を用意するのはやめて、何でも入る3つの枠にした。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">持ち込める上限は、アイテムごとのデータで決める。同じアイテムを2つの枠には入れられないけど、空いている枠があってもいい。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">出発しただけじゃ減らなくて、使ったときだけ1個減るんだよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">アイテムが増えても、データを足せば同じ枠に並べられるよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">回復薬、爆弾、蘇生の羽。何を持っていくかで悩めるようになった。……問題は、その前に買うお金がないことだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">挑戦の途中で拾うアイテムは、別のルールにしたね。取った瞬間に効いて、2つ目の持ち物リストは作らない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">出発前に選んで持ち込み、途中で自分で使うのが消耗品。拾ったらその場で効くのが、挑戦の中だけのアイテムだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">役割を分けておくと、画面もルールも増えすぎないからね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それと回復薬。最初は、使った瞬間に自動で対象を決める方式だった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">手軽ではある。でも、誰を助けるかという判断がゲームから消えてしまう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だから手動で選ぶ方式に変えた。考える一瞬そのものに、戦術的な意味があるからな。</div></div>
+<figure class="dev-shot"><img src="record011_target_select.png" alt="回復薬の対象選択の開発画面。戦闘がスローになり、HPの割合が最も低いジャッジにカーソルがある"><figcaption><span class="capture">DEVELOPMENT CAPTURE — E1.5.2 TARGET SELECT</span><br>回復薬の枠を押すと、戦闘が強いスローになり、4人のHP（体力）が並ぶ。最初のカーソルはHPの割合が最も低い仲間。画面のHPは動作の確認のために作った状況。</figcaption></figure>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">選んでいる間は、戦闘を強いスローにした。止まるわけじゃない。敵はゆっくり動き続けている。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">HP（体力）が満タンの仲間は選べないし、やめれば何も減らない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">倒れた仲間が2人いるときの蘇生の羽も、同じ画面で誰を起こすかを選ぶよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">あと、エドに自分でスティール（敵から少しだけいただく技）の好機を作る手段を持たせたんだよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">これまでは、ジャッジの凍結か、エクレールの出血で敵が弱っているときに、スティールしやすくなる仕組みだった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">今回、エドの爆弾に短いよろめきを付けた。爆弾を当てて、敵がよろめいている間に短剣を当てれば、スティールしやすくなる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">凍結と出血とよろめき、全部重ねたら確率も上がる？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">上がらない。どれか1つあれば、同じ好機として扱う。それに、爆弾そのものではスティールできないし、ボスはよろめかない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">エドは1人でも好機を作れるけど、ジャッジやエクレールと組めば好機は増えるってことだな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">スティールで手に入るのは、少しのGか、生命の聖杯。聖杯は拾ったその場でパーティを回復する。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">試遊して分かったこともある。エドは打たれ弱い。でも、その脆さがいい緊張感になってた。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">追い詰められたところで運よく聖杯を手に入れると、そこから立て直せるんだよね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">あれはかなり気持ちいい。消耗品なしだと挑戦は苦しいし、持っていけば値段に見合うだけの余裕が生まれる。3つの枠の使い勝手も良かった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただし、決めたのは方向性だけだよ。回復量、値段、持ち込みの上限、スティールの確率、よろめきの長さ、スローの倍率。数値はすべてまだ仮（TEST）で、これから調整する。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">誰を連れていくかと、何を持っていくか。その2つで、同じ遺跡の歩き方が変わる。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG 1 — 雇ったのに、押せない</h3>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">事件だ、ルクス。3000G（TEST）を払ってエドを雇った。さあ出撃しようと思って、エドをクリックした。反応しなかった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">落ち着いて、順番に見ていこう。エドの枠の背景の画像が、クリックを受けない設定のままだった。だからクリックが、ボタンまで届いていなかったんだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、動作の確認は通ってたんだろ？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">確認では、ボタンを押したことにする処理を直接呼んでいた。実際のマウスの経路を通らないから、見逃したんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">今は、仮想のマウスで実際のクリックの経路を通す確認を足してあるよ。</div></div>
+</div>
+<div class="anomaly"><h3>ANOMALY LOG 2 — 遊べるまで88秒</h3>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">もうひとつ。Playを押してから遊べるまで、約88秒もかかるようになってた。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">測ってみたら、そのうち約87秒はUnity Editorの側だった。ゲーム側の場面の切り替えは、約0.1〜0.8秒だよ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">同じEditorで読み直しを何百回も繰り返すと、1回ずつ遅くなっていく。なぜ溜まるのかは、まだ分かっていない。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Unityを再起動したら、普通の速さに戻ったんだよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ついでに、ステージに入るたびにBGMを読み直していた処理を減らした。キャラクター選択の画面が操作できるまでが、約338msから約101msになったよ（Editor上の計測）。</div></div>
+</div>
 <div class="box"><b>ANOMALY LOG</b><span>3000G（TEST）を払ってエドを雇った。さあ出撃しよう。エドをクリックした。反応しなかった。</span></div>
-<div class="box"><b>TECH NOTE</b><span>エド枠の背景画像が raycastTarget = false のままで、クリックがボタンまで届いていなかった。QAはボタンの onClick.Invoke() を直接呼んでいたため、実際のマウスの経路を通らず見逃した。今は仮想マウスで実際のクリック経路を通すQAを追加している。3000Gはテスト用の仮の値。</span></div>
-<div class="box"><b>TECH NOTE</b><span>Playを押してから遊べるまで約88秒かかるようになっていたが、そのうち約87秒はUnity Editor側だった。同じEditorで読み直し（Domain Reload）を何百回も繰り返すと、1回ずつ遅くなっていく。ゲーム側のScene切り替えは約0.1〜0.8秒。Unityを再起動したら普通の速さに戻った。Editor内部でなぜ溜まるのかはまだ分かっていない。</span><span>ついでに、Stageに入るたびにBGMを読み直していた処理を減らした。Character Selectが操作できるまでが約338msから約101msに（Editor上の計測）。</span></div>
+<div class="box"><b>TECH NOTE</b><span>エド枠の背景画像が raycastTarget = false のままで、クリックがボタンまで届いていなかった。動作の確認（QA）はボタンの onClick.Invoke() を直接呼んでいたため、実際のマウスの経路を通らず見逃した。今は仮想マウスで実際のクリック経路を通す確認を追加している。3000Gはテスト用の仮の値。</span></div>
+<div class="box"><b>TECH NOTE</b><span>Playを押してから遊べるまで約88秒かかるようになっていたが、そのうち約87秒はUnity Editor側だった。同じEditorで読み直し（Domain Reload）を何百回も繰り返すと、1回ずつ遅くなっていく。ゲーム側のScene（場面）の切り替えは約0.1〜0.8秒。Unityを再起動したら普通の速さに戻った。Editor内部でなぜ溜まるのかはまだ分かっていない。</span><span>ついでに、ステージに入るたびにBGMを読み直していた処理を減らした。キャラクター選択の画面が操作できるまでが約338msから約101msに（Editor上の計測）。</span></div>
 <div class="box"><b>DESIGN PRINCIPLE</b><span>Who stays behind is a build decision.</span><span>誰を連れていくかと、何を持っていくか。その2つの選択で、同じ遺跡の歩き方が変わる。</span></div>
 <div class="box"><b>STATUS</b><span>E1.5 Core Identity Prototype — Human Accepted（方向性のみ）/ Balance &amp; Presentation Deferred</span><span>価格・確率・時間・倍率はすべてTEST。最終仕様ではない。</span></div>
 <div class="box"><b>AI CREW</b><span>Opus 5.5 — Formation / Consumables / Target Select / Ed opportunity implementation, automated QA and load investigation</span><span>GPT-6 Sol — Instruction design / Formation・Consumables・Ed direction</span><span>Human — Playtest / manual targeting and build decisions</span></div>
 <div class="box"><b>NEXT DEPTH</b><span>Balance（後回し）/ Ed Ultimate・専用Card（E2）は未実装・未着手</span></div>
+<p class="dialog-note">2026-10-02 会話形式に改稿</p>
 
 
 <h2 id="record-012">RECORD 012 — 見抜いて、一閃。</h2>
