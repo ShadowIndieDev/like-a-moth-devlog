@@ -227,33 +227,34 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-008">RECORD 008 — 拾ったGは、まだ自分のものではない。</h2>
-<p class="lead-note">同じ遺跡へもう一度行く理由として、Runの外まで続く報酬を作り始めた。拾ったGはClearするまで「Carried G」で、倒れれば失う。Treasureは固定の候補地点から、Runごとに一部だけが現れる。</p>
+<p class="lead-note">同じ遺跡へもう一度行く理由として、1回の挑戦を超えて続く報酬を作り始めた。拾ったGはクリアするまで「所持G（未確定）」で、倒れれば失う。宝は固定の候補地点から、挑戦ごとに一部だけが現れる。</p>
 <p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、Stage 2の探索が形になってきたら、次に気になってきたことがある。なんで同じ遺跡へもう一度行くんだろう。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Stageをクリアするだけなら、一度先へ進めば十分だからね。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だったら、Runの外まで続く報酬を作ろう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、ステージ2の探索が形になってきたら、次に気になってきたことがある。なんで同じ遺跡へもう一度行くんだろう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ステージをクリアするだけなら、一度先へ進めば十分だからね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だったら、1回の挑戦を超えて続く報酬を作ろう。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">まずはGを足したよ。ただし、拾った瞬間に自分のものになるわけじゃない。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Dungeonで手に入れたGは「Carried G」。Clearして初めてWalletに入る。倒れたり撤退したりすれば、Lost Gになる。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">厳しいな。拾ったItemも取られるの？</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ItemとRareな発見物は、その場で永久に手に入る。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ダンジョン（迷宮）で手に入れたGは「所持G（未確定）」。クリアして初めて財布に入る。倒れたり撤退したりすれば、失ったGになる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">厳しいな。拾ったアイテムも取られるの？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">アイテムと珍しい発見物は、その場で永久に手に入る。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">「通貨は危険にさらされる。でも発見そのものは奪わない」。このルールでいこう。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Treasureも、完全なランダムにはしなかった。固定のMapの中に候補の地点を置いて、Runごとにその一部だけが現れる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">宝も、完全なランダムにはしなかった。固定のマップの中に候補の地点を置いて、挑戦ごとにその一部だけが現れる。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">同じ地下居住区なのに、今日はあの路地に宝箱があるかもしれない、ってことか。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。Mapを覚えることと、毎回少し探すことを両立させたかったんだ。</div></div>
-<figure class="dev-shot"><img src="treasure_carried_g.png" alt="Stage 2でTreasureから30Gを回収しCarried G HUDへ反映された開発画面"><figcaption><span class="capture">DEVELOPMENT CAPTURE — M2/M2.1</span><br>Treasureから30Gを回収した直後。左上には常時表示のCarried G。まだWalletには入っていない。</figcaption></figure>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。マップを覚えることと、毎回少し探すことを両立させたかったんだ。</div></div>
+<figure class="dev-shot"><img src="treasure_carried_g.png" alt="ステージ2で宝から30Gを回収し、所持G（未確定）の画面の表示へ反映された開発画面"><figcaption><span class="capture">DEVELOPMENT CAPTURE — M2/M2.1</span><br>宝から30Gを回収した直後。左上には常時表示の所持G（未確定）。まだ財布には入っていない。</figcaption></figure>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">試遊してみたら、Gは常に見えている方がよかった。30G、60G、90Gと増えるほど、「ここで死にたくない」って気持ちになる。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Dark fantasyの緊張感を、単純な難易度じゃなく、「持ち帰りたいものがある」ことで作れるようになってきたね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ダークファンタジーの緊張感を、単純な難易度じゃなく、「持ち帰りたいものがある」ことで作れるようになってきたね。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">たった90Gで、もう命が惜しい。</div></div>
 <div class="anomaly"><h3>ANOMALY LOG — 宝箱が背景にまぎれる</h3>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、ひとつ課題が残ったね。宝箱の見た目は、まだGrayboxに近い。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">背景のObjectと見分けにくい場面があったよな。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">仕組みは動いた。でもGrayboxでは、背景との区別が弱い。見た目は本番の見せ方（Production Presentation）の段階へ繰り越すよ。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Rareも、最終的にはもっと光やEffectで特別にしたい。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ただ、ひとつ課題が残ったね。宝箱の見た目は、まだグレーボックス（灰色の箱だけで組む仮の地形）に近い。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">背景の物と見分けにくい場面があったよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">仕組みは動いた。でもグレーボックスでは、背景との区別が弱い。見た目は本番の見せ方の段階へ繰り越すよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">レア（珍しい等級）も、最終的にはもっと光やエフェクト（光などの演出）で特別にしたい。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも仕組みとしては、「寄り道する理由」がひとつ増えた。これはかなり大きい。</div></div>
 </div>
-<div class="box"><b>TECH NOTE</b><span>Spawn候補地点は固定、Active地点と中身はseeded。Spawn RNGとContent RNGは分離。</span><span>Carried G → ClearでWallet / Game Over・WithdrawalでLost G。</span></div>
-<div class="box"><b>ANOMALY LOG</b><span>Treasureの仕組みは機能したが、Grayboxでは背景との識別が弱い。Production Presentationへ繰り越し。</span></div>
+<div class="box"><b>TECH NOTE</b><span>出現の候補地点は固定、使う地点と中身は種（seed）つきの乱数で決める。出現の乱数と中身の乱数は分けてある。</span><span>所持G（未確定） → クリアで財布へ ／ 全滅（ゲームオーバー）・撤退で失ったGに。</span></div>
+<div class="box"><b>ANOMALY LOG</b><span>宝の仕組みは機能したが、グレーボックスでは背景との識別が弱い。本番の見せ方の段階へ繰り越し。</span></div>
 <p class="dialog-note">2026-10-01 会話形式に改稿</p>
+<p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-009">RECORD 009 — 遺跡の外にも、ゲームを作る。</h2>
 <p class="lead-note">持ち帰ったGを使う場所として、「遺跡調査ギルド」の最小版を作った。探索から帰還、買い物、準備、再探索までが初めて一本につながり、その基盤がエドの設計まで変え始めた。</p>
