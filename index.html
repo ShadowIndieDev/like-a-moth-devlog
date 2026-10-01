@@ -131,30 +131,31 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-005">RECORD 005 — 敵がいない。測ってみたら理由が違った</h2>
-<p class="lead-note">Stage 1で、途中から敵がいなくなった。原因はSpawnのバグだと思ったら、測ってみると別の理由だった。最後は遊んで、敵の数を決めた。</p>
+<p class="lead-note">ステージ1で、途中から敵がいなくなった。原因は敵の出現のバグだと思ったら、測ってみると別の理由だった。最後は遊んで、敵の数を決めた。</p>
 <p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、Stage 1を遊んでると、途中から敵が少なくなるんだよ。何もいない時間が目立つ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、ステージ1を遊んでると、途中から敵が少なくなるんだよ。何もいない時間が目立つ。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">それは事件だね。順番に見ていこう。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">絶対、封印されたエリアの向こう側に敵が湧いてるんだって。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">実際、そのバグはあったよ。でも、直す前にまず測ってみよう。</div></div>
 <div class="anomaly"><h3>ANOMALY LOG — 敵がいない</h3>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">測った結果、主な原因は別だった。開始のときには6体いる。それを倒したあとの補充は、3秒に1体。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">それって、つまり……。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">4人パーティーは、それより速く敵を倒していたんだ。Spawnerが止まっていたんじゃない。供給より撃破が速かった。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">4人パーティは、それより速く敵を倒していたんだ。出現の仕組みが止まっていたんじゃない。供給より撃破が速かった。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">俺たちが強すぎたのかよ！</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そういうことになるね。そこで生存数、Spawnの試み、撃破を記録して、敵の数の目標（Target）を3、4、5で比べた。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そういうことになるね。そこで生存数、出現の試み、撃破を記録して、敵の数の目標を3、4、5で比べた。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">数字だけなら、4でも成り立ちそうだった。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、必殺技を使いながら実際に遊ぶと、5の方が戦場が途切れなくて気持ちいい。Target 5でいこう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、必殺技を使いながら実際に遊ぶと、5の方が戦場が途切れなくて気持ちいい。目標は5でいこう。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">これで開発のやり方がはっきりしたね。違和感がある。もっともらしい原因を想像する。でも、そこで直さない。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">まず測る。原因を分ける。候補を作る。そして最後は人間が遊んで決める。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ログと繰り返しの試験はAIが担当して、「どっちが楽しいか」はHuman Gateで俺が決める、ってことだね。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">この考え方は、このあとのVoice、BGM、SE、Balanceでも繰り返すことになる。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Stage 1にはBoss、UI、Voice、BGM、SEまで揃った。「最低限遊べるもの」まで、あと少しだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ログと繰り返しの試験はAIが担当して、「どっちが楽しいか」は確認の関門（Human Gate）で俺が決める、ってことだね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">この考え方は、このあとの声（ボイス）、BGM、効果音、バランス（数値の調整）でも繰り返すことになる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ステージ1にはボス、画面の表示（UI）、声、BGM、効果音まで揃った。「最低限遊べるもの」まで、あと少しだ。</div></div>
 </div>
-<div class="box"><b>ANOMALY LOG</b><span>SYMPTOM: 敵が少ない</span><span>FIRST HYPOTHESIS: 封印区画へのSpawn</span><span>ROOT CAUSE: Kill pace &gt; Spawn supply</span><span>HUMAN DECISION: Target 5</span></div>
+<div class="box"><b>ANOMALY LOG</b><span>SYMPTOM: 敵が少ない</span><span>FIRST HYPOTHESIS: 封印区画への敵の出現</span><span>ROOT CAUSE: 撃破の速さ &gt; 出現の補充</span><span>HUMAN DECISION: 目標 5</span></div>
 <div class="box"><b>DEVELOPMENT STACK</b><span>Unity / C# / Telemetry / Automated Play QA / Human Gate</span></div>
-<div class="box"><b>数字で見る</b><span>開始時の敵 6体、倒した後の補充 3秒に1体。比べた目標（Target）3・4・5 → 採用は5。</span></div>
+<div class="box"><b>数字で見る</b><span>開始時の敵 6体、倒した後の補充 3秒に1体。比べた目標 3・4・5 → 採用は5。</span></div>
 <p class="dialog-note">2026-09-30 会話形式に改稿</p>
+<p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-006">RECORD 006 — 広くしただけでは、探索にはならなかった。</h2>
 <p class="lead-note">Stage 2の居住区を作り始めた。広くしただけでは探索にならなかったので、敵の出方を区画ごとの有限の戦闘に変え、非常放送で「何をすればいいか」を伝えた。探索はゲームになったが、復旧はまだ「作業」だった。</p>
