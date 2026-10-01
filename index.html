@@ -194,7 +194,7 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-007">RECORD 007 — 敵に囲まれたまま、電源を入れる。</h2>
-<p class="lead-note">敵が残っていても電源を復旧できるようにして、「先に倒すか、今ここで強行するか」の判断を作った。復旧の直後に一気に成長する流れが想像以上に気持ちよく、報酬の見せ方も変えた。Stage 2のGrayboxは、ここで一区切り。</p>
+<p class="lead-note">敵が残っていても電源を復旧できるようにして、「先に倒すか、今ここで強行するか」の判断を作った。復旧の直後に一気に成長する流れが想像以上に気持ちよく、報酬の見せ方も変えた。ステージ2のグレーボックス（灰色の箱だけで組む仮の地形）は、ここで一区切り。</p>
 <p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、復旧が「作業」になってる問題、どうしようか。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">次に試したのは単純な方法だよ。敵を全部倒さなくても、電源を復旧できるようにする。</div></div>
@@ -203,27 +203,28 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そこで殴られたら？</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">作業が中断して、進捗も少し戻される。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">なるほど。「敵を先に倒すか、それとも今ここで復旧を強行するか」。これで初めて、判断が生まれたな。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">同じ頃、同じMapでも毎Run少し状況が変わる仕組みも試しているね。Shelterが使えるRun、別の設備だけが動くRun、報酬がItem・回復・EXPで変わるRun。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Mapそのものを自動で作る（Procedural生成）わけじゃないんだよね。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">同じ頃、同じマップでも挑戦のたびに少し状況が変わる仕組みも試しているね。避難所が使える回、別の設備だけが動く回、報酬がアイテム・回復・経験値で変わる回。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">マップそのものを自動で作るわけじゃないんだよね。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">うん。「同じ地下都市だけど、今回どこが生きているかが少し違う」という考え方だよ。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">Stage 2のGrayboxも、これで一区切りか。最初は「Stage 1を広くしたもの」だったのにな。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Human Playtestを繰り返すうちに、独自のLoopに変わったね。進む、戦う、静かになる、探索する、危険を取るか判断する、設備を復旧する、世界が変わる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ステージ2のグレーボックスも、これで一区切りか。最初は「ステージ1を広くしたもの」だったのにな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Shadowの試遊を繰り返すうちに、独自の循環に変わったね。進む、戦う、静かになる、探索する、危険を取るか判断する、設備を復旧する、世界が変わる。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、次に考えてるのは、一度クリアした遺跡へ、なぜもう一度戻るのか、だ。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">敵や設備からGを回収する。ランダムに現れるTreasureを探す。Rareな発見物は持ち帰る。遺跡調査ギルドで準備を整えて、もう一度深層へ向かう。</div></div>
-<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">実装はまだ始まったばかりだけど、「一つのStageを遊べるゲーム」から、「何度も遺跡へ戻りたくなるゲーム」を考える段階に進み始めたな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">敵や設備からGを回収する。ランダムに現れる宝を探す。珍しい発見物は持ち帰る。遺跡調査ギルドで準備を整えて、もう一度深層へ向かう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">実装はまだ始まったばかりだけど、「一つのステージを遊べるゲーム」から、「何度も遺跡へ戻りたくなるゲーム」を考える段階に進み始めたな。</div></div>
 <div class="anomaly"><h3>ANOMALY LOG — 気持ちよかったのは、復旧の直後</h3>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">この区切りの前に、実際に遊んで分かったことがあったね。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">特に良かったのは、復旧そのものより、その直後なんだ。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">手がかりはEXPだね。Gimmickを解除すると大量のEXPが入って、個人LevelとParty Levelが一気に上がる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">手がかりは経験値だね。仕掛けを解除すると大量の経験値が入って、個人のレベルとパーティのレベルが一気に上がる。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">敵に囲まれた不利な状況で復旧を強行して、成功した瞬間に成長して形勢をひっくり返す。想定してた以上に爽快だった。</div></div>
 <div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">だから報酬の見せ方も変えた。非常放送は「第二区画、電力供給を確認」と、世界の出来事だけを伝える。</div></div>
-<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">一方で、ゲームの画面にはINFRASTRUCTURE RESTORED、獲得EXP、Stage Progressの増加をはっきり出す。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">一方で、ゲームの画面にはINFRASTRUCTURE RESTORED、獲得した経験値、STAGE PROGRESSの増加をはっきり出す。</div></div>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">世界の説明は放送で、プレイヤーに必要なゲームの情報は画面で。この2つは分けていこう。</div></div>
 </div>
 <div class="box"><b>TECH NOTE</b><span>Stage 2 Core Gameplay Loop Prototype — HUMAN ACCEPTED WITH DEFERRED BALANCE / PRESENTATION</span></div>
 <div class="box"><b>NEXT DEPTH</b><span>Meta Progression — Save / G / RunLoot / Treasure / Guild / Shop</span></div>
 <div class="box"><b>AI CREW</b><span>Human — Human Gate / final feel</span><span>Opus 5.5 — Revision implementation / QA / architecture review</span><span>GPT-6 Sol — design decisions / next-phase architecture</span></div>
 <p class="dialog-note">2026-10-01 会話形式に改稿</p>
+<p class="dialog-note">2026-10-02 用語の表記を見直し</p>
 
 <h2 id="record-008">RECORD 008 — 拾ったGは、まだ自分のものではない。</h2>
 <p class="lead-note">同じ遺跡へもう一度行く理由として、Runの外まで続く報酬を作り始めた。拾ったGはClearするまで「Carried G」で、倒れれば失う。Treasureは固定の候補地点から、Runごとに一部だけが現れる。</p>
