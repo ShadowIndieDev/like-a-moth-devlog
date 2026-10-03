@@ -13,9 +13,9 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 .talk.sepia{flex-direction:row-reverse}.talk.sepia .who{color:#e8957a}.talk.sepia .bubble{border-color:#7d4a3c;background:#1d1a1e}
 @media(max-width:650px){.talk .who{flex-basis:68px;font-size:9px;letter-spacing:.04em}.talk .who img{width:44px;height:44px}.talk .bubble{max-width:100%;font-size:14px}}
 </style></head><body>
-<nav><div class="wrap"><div class="brand">LIKE A MOTH</div><div><a href="#records">RECORDS</a><a href="#record-015">LATEST</a></div></div></nav>
+<nav><div class="wrap"><div class="brand">LIKE A MOTH</div><div><a href="#records">RECORDS</a><a href="#record-016">LATEST</a></div></div></nav>
 <header class="wrap"><div class="ey">DEVELOPMENT ARCHIVE / INTEGRATED EDITION</div><h1>LIKE A<br>MOTH</h1><p class="lead">ゲーム制作に一度挫折した個人開発者が、AIを開発チームとして使いながら、ローポリ・ダークファンタジーRPGを形にしていく記録。</p><div class="depth">CURRENT DEPTH — STAGE 2 / THE UNLIT DISTRICT</div></header>
-<main class="wrap" id="records"><div class="index"><a href="#record-001"><b>RECORD 001</b>ゲームを作りたかった。でも、作れなかった。</a><a href="#record-002"><b>RECORD 002</b>LIKE A MOTHというゲームを考える</a><a href="#record-003"><b>RECORD 003</b>AIと最初の戦闘を作る</a><a href="#record-004"><b>RECORD 004</b>Cubeの世界から「封印された遺跡」へ</a><a href="#record-005"><b>RECORD 005</b>敵がいない。測ってみたら理由が違った</a><a href="#record-006"><b>RECORD 006 / NEW</b>広くしただけでは、探索にはならなかった。</a><a href="#record-007"><b>RECORD 007</b>敵に囲まれたまま、電源を入れる。</a><a href="#record-008"><b>RECORD 008 / NEW</b>拾ったGは、まだ自分のものではない。</a><a href="#record-009"><b>RECORD 009 / NEW</b>遺跡の外にも、ゲームを作る。</a><a href="#record-010"><b>RECORD 010 / NEW</b>仲間が増えると、探索の仕方まで変わる。</a><a href="#record-011"><b>RECORD 011 / NEW</b>誰を連れていくか。何を持っていくか。</a><a href="#record-012"><b>RECORD 012 / NEW</b>見抜いて、一閃。</a><a href="#record-013"><b>RECORD 013 / NEW</b>灯の消えた街</a><a href="#record-014"><b>RECORD 014 / NEW</b>気づかれない盾</a><a href="#record-015"><b>RECORD 015 / NEW</b>気づいてもらうために</a></div><section class="record-block"><h2 id="record-001">RECORD 001 — ゲームを作りたかった。でも、作れなかった。</h2>
+<main class="wrap" id="records"><div class="index"><a href="#record-001"><b>RECORD 001</b>ゲームを作りたかった。でも、作れなかった。</a><a href="#record-002"><b>RECORD 002</b>LIKE A MOTHというゲームを考える</a><a href="#record-003"><b>RECORD 003</b>AIと最初の戦闘を作る</a><a href="#record-004"><b>RECORD 004</b>Cubeの世界から「封印された遺跡」へ</a><a href="#record-005"><b>RECORD 005</b>敵がいない。測ってみたら理由が違った</a><a href="#record-006"><b>RECORD 006 / NEW</b>広くしただけでは、探索にはならなかった。</a><a href="#record-007"><b>RECORD 007</b>敵に囲まれたまま、電源を入れる。</a><a href="#record-008"><b>RECORD 008 / NEW</b>拾ったGは、まだ自分のものではない。</a><a href="#record-009"><b>RECORD 009 / NEW</b>遺跡の外にも、ゲームを作る。</a><a href="#record-010"><b>RECORD 010 / NEW</b>仲間が増えると、探索の仕方まで変わる。</a><a href="#record-011"><b>RECORD 011 / NEW</b>誰を連れていくか。何を持っていくか。</a><a href="#record-012"><b>RECORD 012 / NEW</b>見抜いて、一閃。</a><a href="#record-013"><b>RECORD 013 / NEW</b>灯の消えた街</a><a href="#record-014"><b>RECORD 014 / NEW</b>気づかれない盾</a><a href="#record-015"><b>RECORD 015 / NEW</b>気づいてもらうために</a><a href="#record-016"><b>RECORD 016 / NEW</b>AIのチーム体制</a></div><section class="record-block"><h2 id="record-001">RECORD 001 — ゲームを作りたかった。でも、作れなかった。</h2>
 <p class="lead-note">ゲームを作りたかったのに、一度はあきらめた。生成AIに触れて、作り方が変わった。そうして始めたのが『LIKE A MOTH』と、この開発記録だ。</p>
 <p class="dialog-note">この記事は、開発を手伝うAI「ルクス」と開発者Shadowの掛け合いに書き直したものです。ルクスは開発を手伝うAIたちをまとめたキャラクターで、当時の担当は下のAI CREWの欄のとおりです。Shadowのセリフは創作を含みますが、開発の事実と数値は元の記事どおりです。</p>
 <div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、最初の記事だから、俺がどうしてゲームを作り始めたのかを話しておきたい。</div></div>
@@ -675,6 +675,88 @@ figure.dev-shot{margin:30px 0;background:#050d14;border:1px solid var(--line);pa
 <div class="box"><b>AI CREW</b><span>Opus 5.5（Claude Code）— Stage 2の直しの実装（認証札の案内・盾と回り込み・避難所の入口・音の組み込み）、音の合成・加工と計測、試聴のページ、カットインの3案、自動QA・回帰</span><span>Claude（バトル・ダンジョンディレクター）— 直し方の案と指示書、試聴のページの公開</span><span>Human — Playtest（2回）、直し方の承認、試聴での音の選択、Stage 2の完成の判断、カットインの案の選択</span></div>
 <div class="box"><b>NEXT DEPTH</b><span>次はStage 3。</span></div>
 
+<h2 id="record-016">RECORD 016 — AIのチーム体制</h2>
+<p class="lead-note">LIKE A MOTHは、開発者のShadowと、手伝うAIたちで作っている。今回はステージの話を休んで、だれが何を決め、だれが何を作り、どう受け渡しているかを記録する。絵とお話づくりを担当するAI「セピア」が、初めて登場する。</p>
+<p class="dialog-note">Shadow・ルクス・セピアの掛け合いで記録します。ルクスとセピアは、開発を手伝うAIをキャラクターにしたものです。実在する企業・製品の公式見解ではありません。セリフは創作を含みますが、開発の事実と数値は記録どおりです。</p>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクス、今回はステージの話を休んで、チームの話をしよう。このゲーム、俺1人で作ってるわけじゃないからな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">いいね。だれが何を決めて、だれが何を作っているか。一度、整理しておこう。それに今回は、紹介したい人がいるよね。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">はじめまして、セピアです！ 絵とお話づくりの担当だよ。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">迷った時は、まず小さなラフを何枚か描いて、並べてみるのが好き。違いが見えると、選びやすくなるから。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ようこそ、セピア。仲間が増えて、うれしいよ。絵と物語のことを、一緒に考えられるね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">名前の由来は？</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">セピアは、温かい褐色の色の名前。ルクスの光と、Shadowさんの影に、絵の色を添えたくて。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">光と影とセピアか。RPG（ロールプレイングゲーム）で言うと、3人パーティの結成だな。</div></div>
+<figure class="dev-shot"><img src="record016_crew.jpg" alt="Shadow・ルクス・セピアの立ち絵"><figcaption><span class="capture">THE CREW — SHADOW / LUX / SEPIA</span><br>左から、Shadow・ルクス・セピア。</figcaption></figure>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">じゃあ本題。まず、決めるのはだれか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Shadowくんだね。Shadowくんは総合プロデューサー。何を作るか、どの案を採るか、いつ公開するか。最後に決めるのは、いつもShadowくんだ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">俺は、遊んで、聞いて、選ぶ係だな。試遊で「ここが分かりにくい」と言ったり、試聴のページで音を聞き比べたり。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">僕の仕事は、2つの役に分かれている。1つは、設計の相談に乗って、指示書を書く役。もう1つは、指示書どおりに作って、動作を確かめる役。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">1人で2つの役か。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">相談の役は、Shadowくんの決定に番号を付けて、台帳（決定の帳面）に書く。それをもとに、作業の手順書、つまり指示書を書く。作る役は、ゲームのコードや3Dのモデルを作って、動作を確かめて、記録の正本（いちばん正しい記録）に書き写す。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">わたしは、物語と設定と絵の案を出す係。人物の設定画や場面のイメージを描いたり、文の案を書いたりするよ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">ここが大事な所でね。セピアが出す物は、どれも「案」なんだ。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">うん。決めるのはShadowさん。わたしは、違いが見えるように並べて、選びやすくするだけ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そもそも、なんで物語の係を分けたんだっけ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">物語の骨組みを、ダンジョン（迷宮）づくりと並行して考えるためだね。物語の相談まで僕が引き受けると、戦闘や迷宮の実装が止まってしまう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、きっちり別々にはしなかったよな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">このゲームは、迷宮を攻略する遊びが主役だからね。作っている途中で、物語の種が見つかることがある。だから、発想はどちらから出してもいい。最後にまとめる係が決まっているだけなんだ。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">ルクスが見つけた種は、短いメモで届くよ。取り入れるかどうかは、わたしが案にして返す。決めるのは、やっぱりShadowさん。</div></div>
+<figure class="dev-shot"><picture><source media="(max-width:650px)" srcset="record016_roles_phone.png"><img src="record016_roles.png" alt="分担の図：Shadow・ルクス・セピアの役"></picture><figcaption><span class="capture">TEAM CHART — WHO DOES WHAT</span><br>分担の図。Shadowが、すべてを決める。ルクスの仕事は「相談の役」と「作る役」に分かれている。セピアは物語・設定・絵の案を出す。</figcaption></figure>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">受け渡しの流れも、図にできる？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">描いてみたよ。Shadowくんが試遊や試聴をする。そこで決めたことを、相談の役が台帳に書いて、指示書にする。作る役が実装して、動作を確かめて、止まる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">止まる？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">止まり所（STOP）だよ。指示書の最後まで進んだら、変えた物と確かめた結果をまとめて、作業を止める。Shadowくんに見てもらうまで、指示書にない次の作業には進まない。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">並べると、輪になっているね。Shadowさんが見て、また遊んで、次の決定へ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">前回のステージ2が、まさにそれだったな。1回目の試遊で盾に気づきにくいと分かって、直し方を決めて、直してもらって、2回目の試遊で完成。</div></div>
+<figure class="dev-shot"><picture><source media="(max-width:650px)" srcset="record016_flow_phone.png"><img src="record016_flow.png" alt="受け渡しの流れの図"></picture><figcaption><span class="capture">TEAM CHART — HAND-OFF LOOP</span><br>受け渡しの流れ。試遊・試聴 → Shadowの決定 → 台帳 → 指示書 → 実装と動作の確認 → 止まり所（STOP）→ また試遊。セピアの案も、Shadowの決定の所で選ばれる。</figcaption></figure>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">でも、AIに任せると怖いこともあるよな。知らないうちに、何か決まってたりとか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">だから、間違いを防ぐ決まりがある。6つ紹介しよう。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">1つ目。物語の正本に書けるのは、1か所だけ。僕の作る役が、Shadowくんの決めた物だけを書き写す。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">わたしの案は、Shadowさんが「これを確定として記録して」と言うまで、ずっと案のまま。話し合ったことは、全部「仮」なの。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">書く人が1人なら、食い違わないってことか。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そう。それに僕たちは、会話の記憶だけを頼りに動かない。作業の前に、正本を読み直す。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">2つ目。わたしが書ける場所は決まっている。わたし用の受け取り口だけ。ほかの所は読むだけで、ゲームのファイルは書き換えない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">3つ目。公開はShadowくんだけ。この記事も、僕が用意するのは公開の手前まで。Shadowくんが読んで、公開のボタン（GitHubの「Merge」）を押した時に、初めて公開される。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">俺がボタンを押さないと、世に出ないってことだな。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">4つ目。お金のかかる生成ツールは、Shadowくんが上限を決めてから使う。決まるまでは使わない。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">絵にも段階があるの。社内で比べるための絵は、記録さえ残せば自由に描けるけど、ゲームに入る絵や公開する絵は、1件ずつShadowさんの承認が要るよ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">5つ目。作業の前に、戻せる保存を作る。チェックポイント（変える前の保存）だね。何かを壊しても、作業の前に戻れる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">6つ目。止まり所は、1つの作業のまとまりの最後に1回だけ。途中で止まる条件に当たった項目は、記録を残して次の項目へ進む。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">俺が出かけてる間も、作業が進むわけだ。帰ってきたら、まとめて見ればいい。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">決まりがあるから、わたしも安心して案を広げられるよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">まとめると、AIに任せきりじゃない。決めるのは俺。そのかわり、作るのも、確かめるのも、案を広げるのも、手を分けてやってる。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">僕は証拠と仕組み、セピアは見せ方と物語。決めるのはShadowくん。この形で続けていこう。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">よし。じゃあ、ステージ3づくりに戻ろう。</div></div>
+<div class="anomaly"><h3>ANOMALY LOG 1 — ルクスの自信満々の間違い</h3>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">ルクスって、間違えることある？</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">あるよ。最近の大きな物を白状しよう。ある仕組みを相談していた時、僕は「右アクション（右クリックで出す技）の重撃で対処すればいい」という案を、自信を持って出した。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">そこで俺が聞いたんだ。「それ、ルミエラを操作してる時はどうなるの？」って。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">手がかりを確かめ直したら、すぐに分かった。右アクションは、キャラクターごとに違う。アレックスは重撃、ジャッジは氷結術、エクレールは穿突、ルミエラは治癒術。重撃は、アレックスの技だったんだ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">全員の右アクションが重撃だと、思い込んでいた。思い込みは、証拠じゃない。僕の間違いだね。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">で、別の形にした。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">Shadowくんの考えた形に、僕が細かい所を足して、Shadowくんが「その形がよい」と決めた。どのキャラクターを操作していても、同じように考えられる形だよ。仕組みの前提も、確かめ直した。中身は、また別の回で。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">遊ぶ側の目で見ると、そういう所がすぐ引っかかるんだよな。</div></div>
+</div>
+<div class="anomaly"><h3>ANOMALY LOG 2 — 力試しのアレックス</h3>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">セピアとは、アレックスの細かいモデルも試したよな。選択画面みたいに大きく映す場面も増えそうだから、どこまでできるか、力試しで。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">うん。わたしがアレックスの三面図（正面・横・後ろから見た図）を描いたの。全身の三面図、斜めから見た全身と顔、装備と色のメモの3枚。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">僕はそれを見て、形と型紙（色を塗るための展開図）と仮の骨（動かすための骨組み）まで作った。三角形は約7,300。今の4人の、数倍の細かさだよ。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">三面図は使いやすかった。どの向きでも頭や肩や膝の高さがそろっていたから、大きさをすぐ決められた。ただ、図ごとに髪の房や大剣の幅が少しずつ違った。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">そこは、メモに書いておいたの。図の間の違いと、元の設定画を優先する所。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">そのメモのおかげで、迷った所をすぐ決められた。元の設定画に合わせて、1つの形にしたよ。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">途中の画像を見て、正直すごいと思った。可能性を感じる。……でも、この細かさに合わせて敵や迷宮まで作り直したら、開発がすごく長くなる。</div></div>
+<div class="talk shadow"><div class="who"><img src="record_icon_shadow.png" alt="Shadow">SHADOW</div><div class="bubble">だから、一旦ここまで。最初の迷宮ができ上がったら、改めて考える。</div></div>
+<div class="talk sepia"><div class="who"><img src="record_icon_sepia.png" alt="セピア">SEPIA</div><div class="bubble">作った物は、消さずに残してあるよ。ゲームには入れていない。</div></div>
+<div class="talk opus"><div class="who"><img src="record_icon_opus.png" alt="ルクス">LUX</div><div class="bubble">セピアが描いて、僕が作って、続けるかどうかはShadowくんが決める。この記録の分担の、そのままの出来事だったね。</div></div>
+</div>
+<div class="box"><b>TECH NOTE — 受け渡しの書類</b><span>台帳：Shadowの決定を、相談の役が番号（HD）を付けて書き留める帳面。Shadowが決めたことと、まだ決まっていない提案は、印を分けて書く。</span><span>指示書：台帳の決定から作る、作業の手順書。どの決定によるか、何を作るか、何を確かめるか、どこで止まるかを書く。</span><span>記録の正本：作る役が、決定を番号（DEC）を付けて書き写す。今の状態や、戻せる保存の一覧もここにある。作業の前に、AIはまずここを読む。</span><span>物語の確定一覧：セピアの案のうち、Shadowが「確定」と言った物だけを、番号（SC）を付けて並べる。ルクスが物語として使うのは、この一覧に載った物だけ。</span><span>止まり所（STOP）の報告：変えた物、確かめた結果、Shadowに見てほしい所、決めてほしい所をまとめる。</span></div>
+<div class="box"><b>TECH NOTE — 間違いを防ぐ6つの決まり</b><span>1. 物語の正本に書くのは1か所（ルクスの作る役）だけ。セピアの案は、Shadowが確定と言うまで「案」。話し合ったことは全部「仮」。</span><span>2. セピアが書けるのは、決まった受け取り口だけ。ほかは読むだけで、ゲームのファイルや3Dのファイル、ブログは書き換えない。</span><span>3. 公開（GitHubの「Merge」）はShadowだけ。AIが用意するのは公開の手前まで。</span><span>4. お金のかかる生成は、Shadowが上限を決めるまで使わない。ゲームに入る絵・公開する絵は、1件ずつShadowが承認する。</span><span>5. 作業の前に、チェックポイント（変える前の保存）を作る。今ある保存は上書きしない。</span><span>6. 止まり所は、作業のまとまりの最後に1回。途中で止まる条件に当たった項目は、記録を残して次へ進む。</span></div>
+<div class="box"><b>数字で見る</b><span>台帳の決定（番号HD）：251件。台帳を始めた9月27日から、7日間で。</span><span>記録の正本の決定（番号DEC）：259件（開発の始めから）。</span><span>物語の確定一覧（番号SC）：39件。中身は、まだ秘密。</span><span>指示書：65本（9月27日から）。</span><span>試聴・確認のページ：28枚（音の試聴 26・確認の資料 2）。</span><span>チェックポイント（戻せる保存）：216個（作業の前と、作業の区切りで作る）。</span><span>どれも2026-10-03に、記録のファイルから数えた。</span></div>
+<div class="box"><b>DESIGN PRINCIPLE</b><span>AI proposes. Shadow decides.</span><span>案を出すのはAI。決めるのはShadow。</span></div>
+<div class="box"><b>STATUS</b><span>Team — 3つの役で開発中：総合プロデューサー（Human）／バトル・ダンジョンディレクター（ルクス：相談と指示書・台帳、実装と確認・記録の正本）／ストーリー・アートディレクター（セピア：物語・設定・絵の案）。暫定・試行の体制（HD-180〜182）。</span><span>Blog — 3人目のキャラクター SEPIA（HD-229）。この記録が初登場。</span><span>Stage 3 — 制作中。</span></div>
+<div class="box"><b>AI CREW</b><span>開発を手伝うAI（相談の役）— この記録の指示書</span><span>開発を手伝うAI（作る役）— 下書き、分担の図と流れの図、数の集計、公開前の確認と公開の準備</span><span>イラストとシナリオを手伝うAI — セピアの立ち絵、アレックスの三面図（事件ファイル2）</span><span>Human — 体制と決まりの決定、アレックスの試作の判断、この記録の確認と公開の判断</span></div>
+<div class="box"><b>NEXT DEPTH</b><span>Stage 3を制作中。次はStage 3の予告。</span></div>
+
 </section></main>
-<footer><div class="wrap">LIKE A MOTH — Development Archive / RECORD 001–015<br>Next: Stage 3</div></footer>
+<footer><div class="wrap">LIKE A MOTH — Development Archive / RECORD 001–016<br>Next: Stage 3</div></footer>
 </body></html>
